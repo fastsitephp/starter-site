@@ -1,0 +1,118 @@
+/************ Body and Main Layout ************/
+
+/* Required For IE11 when using Flexbox fixed footer layout */
+html, body { height:100%; }
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+body > main {
+    flex: 1 0 auto;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/************ General Layout and Colors ************/
+
+/*
+    CSS Variables, supported in modern browsers but not IE 11.
+    Fallbacks colors can be handled inline by including both 
+    standard color and variable color, example:
+        background-color:red; background-color:var(--error-color);
+    or below using the below [ms-high-contrast] section for IE.
+
+    Colors are from:
+    https://www.pantone.com/color-intelligence/fashion-color-trend-report/fashion-color-trend-report-london-autumn-winter-2019-2020
+        --main-color:  https://www.pantone.com/color-finder/18-4217-TCX
+        --error-color: https://www.pantone.com/color-finder/17-1450-TCX
+        --info-color:  https://www.pantone.com/color-finder/19-4055-TCX
+*/
+:root {
+    --main-color: rgb(87, 114, 132);
+    --dark-color: hsla(204, 21%, 23%, 1);
+    --light-color: hsla(204, 21%, 83%, 1);
+    --lightest-color: hsla(204, 21%, 93%, 1);
+    --error-color: rgb(190, 75, 59);
+    --info-color: rgb(42, 75, 124);
+}
+
+/* Use fallback colors for key page elements for IE */
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+    header,
+    footer,
+    .nav.flex-column .nav-item a:hover { background-color:rgb(87, 114, 132); }
+
+    body,
+    a,
+    a:visited { color:hsla(204, 21%, 23%, 1); }
+
+    .nav-item.active .nav-link,
+    .jumbotron { background-color:hsla(204, 21%, 23%, 1); }
+
+    .nav-item:not(.active):hover .nav-link { background-color:hsla(204, 21%, 83%, 1); color:rgb(87, 114, 132); }
+    .nav-item.active:hover .nav-link { color:rgb(87, 114, 132); }
+}
+
+body {
+    background-color: var(--lightest-color);
+    background-image: url('../img/site-background.svg');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+section { background-color: white; }
+
+nav.navbar { text-align:center; }
+.navbar-nav { margin:auto; }
+.navbar-nav .nav-link { padding:.5em 2em; color:white; margin:auto 5px; }
+.nav-item.active .nav-link { background-color:var(--dark-color); box-shadow:0 0 1px 2px rgba(0,0,0,.5); }
+.nav-item:not(.active):hover .nav-link { background-color:var(--light-color); color:var(--main-color); }
+.nav-item.active:hover .nav-link { color:var(--main-color); }
+.nav.flex-column .nav-item a {
+    padding: 0.5em 1em;
+    display: block;
+}
+.nav.flex-column .nav-item a:hover {
+    background-color: var(--main-color);
+    color:white;
+} 
+
+body,
+a,
+a:visited { color:var(--dark-color); }
+
+.jumbotron { background-color:var(--dark-color); margin-top:50px; }
+.jumbotron h1 { color:white; }
+
+main, footer { text-align:center; }
+header { background-color:var(--main-color); box-shadow:0 0 1px 1px rgba(0, 0, 0, .5); }
+footer { background-color:var(--main-color); padding:1em; color:white; box-shadow:0 0 1px 1px rgba(0, 0, 0, .5); }
+footer p { margin-bottom:0; }
+section { box-shadow: 0 1px 5px 0 rgba(0,0,0,.5); margin-top:4em; padding:2em; }
+
+.alert-info { background-color:var(--info-color); color:white; }
+.alert-danger { background-color:red; background-color:var(--error-color); color:white; }
+
+.table { color: var(--dark-color); }
+.table thead th,
+.table td,
+.table th { border-top:none; border-bottom:none; }
+
+.table-striped tbody tr:nth-of-type(odd) { background-color:var(--light-color); }
+
+.table.table-bordered thead th,
+.table.table-bordered td,
+.table.table-bordered th { 
+    border-top:1px solid var(--dark-color);
+    border-bottom:1px solid var(--dark-color);
+}
+.table-bordered td, .table-bordered th {
+    border:1px solid var(--dark-color);
+}
+
+.btn-primary { background-color: var(--main-color); border-color: var(--dark-color); }
+.btn-primary:hover,
+.btn-primary:not(:disabled):not(.disabled):active { background-color: var(--dark-color); }

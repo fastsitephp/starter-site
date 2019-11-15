@@ -1,0 +1,20 @@
+# Directories
+.vscode/
+.idea/
+tmp/
+vendor/
+__pycache__/
+node_modules/
+
+# OS Files
+.DS_Store
+Desktop.ini
+Thumbs.db
+
+# Enviroment Variable Files
+.env
+
+# PHP Composer Files
+composer.lock
+composer.phar
+composer-setup.php

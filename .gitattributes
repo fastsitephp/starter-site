@@ -1,0 +1,13 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# CRLF for Windows Files
+*.config   text eol=crlf
+
+# Require LF for *nix files
+.htaccess  text eol=lf
+
+# Binary Files
+*.ico      binary
+*.png      binary
+*.jpg      binary

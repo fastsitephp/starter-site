@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="500px" height="500px" viewBox="0 0 500 500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>site-background</title>
+    <desc>Created with Sketch.</desc>
+    <g id="site-background" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#CBD5DD" x="0" y="0" width="500" height="500"></rect>
+        <rect id="Rectangle" fill-opacity="0.1" fill="#577284" transform="translate(113.147981, 443.883595) scale(1, -1) rotate(-37.000000) translate(-113.147981, -443.883595) " x="-171.852019" y="313.383595" width="570" height="261"></rect>
+        <rect id="Rectangle" fill-opacity="0.05" fill="#577284" transform="translate(448.147981, 467.383595) scale(1, -1) rotate(50.000000) translate(-448.147981, -467.383595) " x="163.147981" y="316.383595" width="570" height="302"></rect>
+    </g>
+</svg>
