@@ -13,8 +13,17 @@
 The starter site does not include the Framework so you will need to run [scripts/install.php] to download it and install it. Once setup you can launch a site from the command-line as show below or if you use a Code Editor or IDE [Visual Studio Code, GitHub Atom, etc] then you can launch the site directly from your editor. See the above getting started page for more.
 
 ~~~
+# Download this Repository
 cd {starter-site-root}
 php ./scripts/install.php
+php -S localhost:3000
+~~~
+
+The starter site can also be installed using Composer (PHP Dependency/Package Manager).
+
+~~~
+composer create-project fastsitephp/starter-site my-app
+cd my-app
 php -S localhost:3000
 ~~~
 
