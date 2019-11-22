@@ -4,7 +4,7 @@ FastSitePHP uses [Semantic Versioning](https://docs.npmjs.com/about-semantic-ver
 
 ## 1.0.1 (November 22, 2019)
 
-* CSS Update for <table> background color
+* CSS Update for &lt;table&gt; background color
 * Fixed links on Resources page
 * Documentation updates
 
