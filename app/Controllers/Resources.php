@@ -22,19 +22,19 @@ class Resources
         // Link list
         $links = [
             [
-                'url' => "http://www.fastsitephp/{$lang}/quick-reference",
+                'url' => "https://www.fastsitephp.com/{$lang}/quick-reference",
                 'title' => $i18n['quick_ref'],
             ],
             [
-                'url' => "http://www.fastsitephp/{$lang}/examples",
+                'url' => "https://www.fastsitephp.com/{$lang}/examples",
                 'title' => $i18n['examples'],
             ],
             [
-                'url' => "http://www.fastsitephp/{$lang}/documents",
+                'url' => "https://www.fastsitephp.com/{$lang}/documents",
                 'title' => $i18n['docs'],
             ],
             [
-                'url' => "http://www.fastsitephp/{$lang}/api",
+                'url' => "https://www.fastsitephp.com/{$lang}/api",
                 'title' => $i18n['api'],
             ],
         ];
