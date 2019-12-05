@@ -33,9 +33,9 @@ php -S localhost:3000
 
 ## 💻 Starter Site Screenshots (Print Screens)
 
-![Starter Site Home Page](https://dydn9njgevbmp.cloudfront.net/img/starter_site/2019-06-17/home-page.png)
+![Starter Site Home Page](https://raw.githubusercontent.com/fastsitephp/static-files/master/img/starter_site/2019-06-17/home-page.png)
 
-![Starter Site Example Page](https://dydn9njgevbmp.cloudfront.net/img/starter_site/2019-06-17/data-page.png)
+![Starter Site Example Page](https://raw.githubusercontent.com/fastsitephp/static-files/master/img/starter_site/2019-06-17/data-page.png)
 
 ## 🤝 Contributing
 
