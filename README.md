@@ -12,7 +12,7 @@
 
 The starter site does not include the Framework so you will need to run [scripts/install.php] to download it and install it. Once setup you can launch a site from the command-line as show below or if you use a Code Editor or IDE [Visual Studio Code, GitHub Atom, etc] then you can launch the site directly from your editor. See the above getting started page for more.
 
-### Donwload and run this site
+### Download and run this site
 
 ~~~
 # Download this Repository
