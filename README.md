@@ -12,7 +12,7 @@
 
 The starter site does not include the Framework so you will need to run [scripts/install.php] to download it and install it. Once setup you can launch a site from the command-line as show below or if you use a Code Editor or IDE [Visual Studio Code, GitHub Atom, etc] then you can launch the site directly from your editor. See the above getting started page for more.
 
-### Donwload and run this site
+### Download and run this site
 
 ~~~
 # Download this Repository
@@ -29,6 +29,19 @@ In addition to downloading this repository you can also start a new project usin
 composer create-project fastsitephp/starter-site my-app
 cd my-app
 php -S localhost:3000
+~~~
+
+### Install directly on a server
+
+A bash script is available for a quick setup of Apache, PHP, and FastSitePHP with a Starter Site. This script works for a full setup on a default OS when nothing is installed.
+
+Supported Operating Systems (more will be added in the future):
+
+* Ubuntu 18.04 LTS
+
+~~~
+wget https://www.fastsitephp.com/downloads/create-fastsitephp-app.sh
+sudo bash create-fastsitephp-app.sh
 ~~~
 
 ## 💻 Starter Site Screenshots (Print Screens)
