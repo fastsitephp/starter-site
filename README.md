@@ -31,6 +31,19 @@ cd my-app
 php -S localhost:3000
 ~~~
 
+### Install directly on a server
+
+A bash script is available for a quick setup of Apache, PHP, and FastSitePHP with a Starter Site. This script works for a full setup on a default OS when nothing is installed.
+
+Supported Operating Systems (more will be added in the future):
+
+* Ubuntu 18.04 LTS
+
+~~~
+wget https://www.fastsitephp.com/downloads/create-fastsitephp-app.sh
+sudo bash create-fastsitephp-app.sh
+~~~
+
 ## 💻 Starter Site Screenshots (Print Screens)
 
 ![Starter Site Home Page](https://raw.githubusercontent.com/fastsitephp/static-files/master/img/starter_site/2019-06-17/home-page.png)
