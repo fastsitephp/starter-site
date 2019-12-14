@@ -1,7 +1,7 @@
 {
     "site_title": "Starter Site",
-    "menu_home": "Home",
-    "menu_resources": "Resources",
+    "menu_home": "Início",
+    "menu_resources": "Recursos",
     "menu_lorem_ipsum": "Lorem Ipsum",
-    "old_browser_warning": "Warning - some features on this page require a newer Browser or OS than the one that you are currently using. If you have a different browser available then open this page with it."
+    "old_browser_warning": "Aviso - alguns recursos desta página requerem um navegador ou sistema operacional mais recente que o que você está usando no momento. Se você tiver um navegador diferente disponível, abra esta página com ele."
 }
