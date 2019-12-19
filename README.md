@@ -40,8 +40,8 @@ Supported Operating Systems (more will be added in the future):
 * Ubuntu 18.04 LTS
 
 ~~~
-wget https://www.fastsitephp.com/downloads/create-fastsitephp-app.sh
-sudo bash create-fastsitephp-app.sh
+wget https://www.fastsitephp.com/downloads/create-fast-site.sh
+sudo bash create-fast-site.sh
 ~~~
 
 ## 💻 Starter Site Screenshots (Print Screens)

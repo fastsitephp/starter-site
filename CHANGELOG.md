@@ -2,6 +2,13 @@
 
 FastSitePHP uses [Semantic Versioning](https://docs.npmjs.com/about-semantic-versioning).
 
+=======
+## 1.1.2 (December 16, 2019)
+
+* Brazilian Portuguese [pt-BR] language tranlations added
+  * **Thanks Marcelo dos Santos Mafra!** https://github.com/msmafra
+* Updated [install.php] to use to use the most recent release of FastSitePHP and to provide an exit error code if the script files.
+
 ## 1.1.1 (December 11, 2019)
 
 * Update [install.php] to use to handle composer directory structure for FastSitePHP so it doesn't attempt to install over composer. This would have caused an error on the install script if running after previously setting up the site with composer; however it didn't cause any site errors.
