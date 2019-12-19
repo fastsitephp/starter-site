@@ -2,6 +2,7 @@
 
 FastSitePHP uses [Semantic Versioning](https://docs.npmjs.com/about-semantic-versioning).
 
+=======
 ## 1.1.2 (December 16, 2019)
 
 * Brazilian Portuguese [pt-BR] language tranlations added
