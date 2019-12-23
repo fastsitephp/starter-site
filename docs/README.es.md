@@ -14,7 +14,7 @@ El sitio de inicio no incluye el Framework, por lo que deberá ejecutar `scripts
 
 ### Descargue y ejecute este sitio
 
-~~~
+~~~text
 # Descargue este repositorio
 cd {starter-site-root}
 php ./scripts/install.php
@@ -25,7 +25,7 @@ php -S localhost:3000
 
 Además de descargar este repositorio, también puede iniciar un nuevo proyecto con Composer.
 
-~~~
+~~~text
 composer create-project fastsitephp/starter-site my-app
 cd my-app
 php -S localhost:3000
@@ -39,14 +39,14 @@ Sistemas operativos compatibles (se agregarán más en el futuro):
 
 * Ubuntu 18.04 LTS
 
-~~~
+~~~bash
 wget https://www.fastsitephp.com/downloads/create-fast-site.sh
 sudo bash create-fast-site.sh
 ~~~
 
 ### Directory Structure
 
-```
+```text
 {root}
 |
 |   # Código PHP
