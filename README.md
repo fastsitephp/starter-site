@@ -1,3 +1,7 @@
+# 🌟 FastSitePHP Starter Site
+
+**Thanks for visiting!** 🌠👍
+
 <table>
 	<tbody>
 		<tr align="center"><td colspan="2">
@@ -15,10 +19,6 @@
 		</tr>
 	</tbody>
 </table>
-
-# 🌟 FastSitePHP Starter Site
-
-**Thanks for visiting!** 🌠👍
 
 **This is the main Starter Site for FastSitePHP.** It includes several examples pages and provides a basic directory/file structure. The site is designed to provide structure for basic content (JavaScript, CSS, etc) while remaining small in size so that it is easy to remove files you don’t need and customize it for your site.
 
