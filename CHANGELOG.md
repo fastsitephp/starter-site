@@ -4,9 +4,10 @@ FastSitePHP uses [Semantic Versioning](https://docs.npmjs.com/about-semantic-ver
 
 ## Next release (changes on master branch)
 
+* Site - Added i18n nav menu
+* Scripts - Added Bash Template Script for Syncing Site updates: `starter-site\scripts\sync-server.sh`
 * Documentation - Added Directory Structure to the main readme file
 * Documentation - Added `es` and `pt-BR` translations for the readme file
-* Scripts - Added Bash Template Script for Syncing Site updates: `starter-site\scripts\sync-server.sh`
 
 ## 1.1.2 (December 16, 2019)
 
