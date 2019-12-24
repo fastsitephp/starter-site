@@ -51,7 +51,7 @@ php -S localhost:3000
 
 ### Install directly on a server
 
-A bash script is available for a quick setup of Apache, PHP, and FastSitePHP with a Starter Site. This script works for a full setup on a default OS when nothing is installed.
+A bash script is available for a quick setup of a Web Server (Apache or nginx), PHP, and FastSitePHP with a Starter Site. This script works for a full setup on a default OS when nothing is installed.
 
 Supported Operating Systems (more will be added in the future):
 

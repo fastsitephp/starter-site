@@ -33,7 +33,7 @@ php -S localhost:3000
 
 ### Instalar directamente en un servidor
 
-Un script bash está disponible para una configuración rápida de Apache, PHP y FastSitePHP con un sitio de inicio. Este script funciona para una configuración completa en un sistema operativo predeterminado cuando no hay nada instalado.
+Un script bash está disponible para una configuración rápida de un servidor web (Apache o nginx), PHP y FastSitePHP con un sitio de inicio. Este script funciona para una configuración completa en un sistema operativo predeterminado cuando no hay nada instalado.
 
 Sistemas operativos compatibles (se agregarán más en el futuro):
 
