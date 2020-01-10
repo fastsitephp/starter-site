@@ -98,9 +98,11 @@ sudo bash create-fast-site.sh
 
 ## :desktop_computer: Starter Site Print Screens (Screenshots)
 
-![Starter Site Home Page](https://raw.githubusercontent.com/fastsitephp/static-files/master/img/starter_site/2019-06-17/home-page.png)
+![Starter Site Home Page](https://raw.githubusercontent.com/fastsitephp/static-files/master/img/starter_site/2020-01-10/home-page.png)
 
-![Starter Site Example Page](https://raw.githubusercontent.com/fastsitephp/static-files/master/img/starter_site/2019-06-17/data-page.png)
+![Starter Site Example Page](https://raw.githubusercontent.com/fastsitephp/static-files/master/img/starter_site/2020-01-10/data-page.png)
+
+![Starter Site Login Page](https://raw.githubusercontent.com/fastsitephp/static-files/master/img/starter_site/2020-01-10/login-page.png)
 
 ## :handshake: Contributing
 

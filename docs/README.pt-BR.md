@@ -80,9 +80,11 @@ sudo bash create-fast-site.sh
 
 ## :desktop_computer: Telas de impressão do site inicial (Capturas de tela)
 
-![Página inicial do site inicial](https://raw.githubusercontent.com/fastsitephp/static-files/master/img/starter_site/2019-06-17/home-page.png)
+![Página inicial do site inicial](https://raw.githubusercontent.com/fastsitephp/static-files/master/img/starter_site/2020-01-10/home-page.png)
 
-![Página de exemplo do site inicial](https://raw.githubusercontent.com/fastsitephp/static-files/master/img/starter_site/2019-06-17/data-page.png)
+![Página de exemplo do site inicial](https://raw.githubusercontent.com/fastsitephp/static-files/master/img/starter_site/2020-01-10/data-page.png)
+
+![Página de login do site inicial](https://raw.githubusercontent.com/fastsitephp/static-files/master/img/starter_site/2020-01-10/login-page.png)
 
 ## :handshake: Contribuindo
 
