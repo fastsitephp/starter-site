@@ -1,0 +1,8 @@
+{
+    "page_title": "Login",
+    "login_error": "Unable to login. Check your login and password.",
+    "enter_login": "Enter Login",
+    "enter_password": "Enter Password",
+    "submit": "Submit",
+    "unexpected_error": "Error submitting form, please check your internet connection or show this error to support."
+}

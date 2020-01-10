@@ -74,7 +74,7 @@ nav.navbar { text-align:center; }
 .navbar-nav .nav-link { padding:.5em 2em; color:white; margin:auto 5px; }
 .nav-item.active .nav-link { background-color:var(--dark-color); box-shadow:0 0 1px 2px rgba(0,0,0,.5); }
 .nav-item:not(.active):hover .nav-link { background-color:var(--light-color); color:var(--main-color); }
-.nav-item.active:hover .nav-link { color:var(--main-color); }
+.nav-item.active:hover .nav-link { color:var(--light-color); }
 .nav.flex-column .nav-item a {
     padding: 0.5em 1em;
     display: block;
@@ -140,3 +140,11 @@ section { box-shadow: 0 1px 5px 0 rgba(0,0,0,.5); margin-top:4em; padding:2em; }
 .btn-primary { background-color: var(--main-color); border-color: var(--dark-color); }
 .btn-primary:hover,
 .btn-primary:not(:disabled):not(.disabled):active { background-color: var(--dark-color); }
+a.btn-primary:visited { color:#fff; }
+
+.btn-primary.disabled, .btn-primary:disabled { background-color: var(--light-color); border-color: var(--light-color); }
+
+.login-form,
+.auth-demo { max-width:600px; margin:40px auto; }
+.login-form .form-group,
+.auth-demo p { margin:2em auto; }

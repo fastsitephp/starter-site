@@ -5,10 +5,16 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-		<title><?= $app->escape($i18n['site_title']) ?> | <?= (isset($page_title) ? $app->escape($page_title) : $app->escape($i18n['page_title'])) ?></title>
+		<?php
+		$page_title = (isset($page_title) ? $page_title : null);
+		if ($page_title === null && isset($i18n['page_title'])) {
+			$page_title = $i18n['page_title'];
+		}
+		?>
+		<title><?= $app->escape($i18n['site_title']) ?> | <?= $app->escape($page_title) ?></title>
 		
 		<link rel="shortcut icon" href="<?= $app->rootDir() ?>favicon.ico" />
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 		<link href="<?= $app->rootDir() ?>css/site.css" rel="stylesheet" />
 	</head>
 	<body>
@@ -34,6 +40,9 @@
 					</li>
 					<li class="nav-item <?= (isset($nav_active_link) && $nav_active_link === 'lorem-ipsum' ? 'active' : '') ?>">
 						<a class="nav-link" href="<?= $app->rootUrl() . $app->lang ?>/lorem-ipsum"><?= $app->escape($i18n['menu_lorem_ipsum']) ?></a>
+					</li>
+					<li class="nav-item <?= (isset($nav_active_link) && $nav_active_link === 'auth-demo' ? 'active' : '') ?>">
+						<a class="nav-link" href="<?= $app->rootUrl() . $app->lang ?>/auth-demo"><?= $app->escape($i18n['menu_auth_demo']) ?></a>
 					</li>
 					<li class="nav-item sub-menu i18n-menu">
 						<div>

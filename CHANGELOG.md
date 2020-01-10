@@ -2,9 +2,16 @@
 
 FastSitePHP uses [Semantic Versioning](https://docs.npmjs.com/about-semantic-versioning).
 
-## Next release (changes on master branch)
+## 1.2.0 (January 10, 2020)
 
+* Site - Added Authentication Demo
+  * Auth Middleware - Includes options for JWT, Signed Cookies, Encrypted Cookies, PHP Sessions, Database, LDAP / Windows Networks
+  * Auth Controller
+  * Auth Routing Examples
+  * Login Page
 * Site - Added i18n nav menu
+* Site - Added `Env->loadDotEnv()` middleware function and additional usage docs for the `Env` middleware
+* Site - Updated `Bootstap` Version from `4.3.1` to `4.4.1`
 * Scripts - Added Bash Template Script for Syncing Site updates: `starter-site\scripts\sync-server.sh`
 * Documentation - Added Directory Structure to the main readme file
 * Documentation - Added `es` and `pt-BR` translations for the readme file

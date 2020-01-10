@@ -34,7 +34,7 @@ wget https://github.com/fastsitephp/starter-site/archive/master.zip -O ~/master.
 unzip -q ~/master.zip
 rm ~/master.zip
 rsync -rcv --delete ~/starter-site-master/app/ /var/www/app
-rsync -rcv --delete --exclude .env ~/starter-site-master/app_data/ /var/www/app_data
+rsync -rcv --delete --exclude .env --exclude users.sqlite ~/starter-site-master/app_data/ /var/www/app_data
 rsync -rcv --delete --exclude Web.config --exclude .htaccess --exclude index.php ~/starter-site-master/public/ /var/www/html
 rsync -rcv --delete ~/starter-site-master/scripts/ /var/www/scripts
 rm -r ~/starter-site-master
