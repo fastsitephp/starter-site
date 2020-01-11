@@ -44,6 +44,12 @@ wget https://www.fastsitephp.com/downloads/create-fast-site.sh
 sudo bash create-fast-site.sh
 ~~~
 
+### Versiones compatibles de PHP
+
+* El sitio FastSitePHP Stater funciona con todas las versiones de PHP desde `5.4` a` 7.4`.
+* FastSitePHP Framework también es compatible con PHP 5.3.
+* Si necesita instalar el sitio Stater en un servidor con PHP 5.3, deberá realizar algunos cambios menores, como reemplazar `[]` por `array ()` y evitar el uso de etiquetas PHP Short en las plantillas.
+
 ### Directory Structure
 
 ```text
