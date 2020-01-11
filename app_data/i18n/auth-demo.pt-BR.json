@@ -2,5 +2,6 @@
     "page_title": "Demonstração de Autenticação",
     "logged_in_as": "Logado como",
     "expires_at": "Expira em",
+    "timezone": "Fuso horário",
     "logout": "Sair"
 }

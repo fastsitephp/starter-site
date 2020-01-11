@@ -2,5 +2,6 @@
     "page_title": "Authentication Demo",
     "logged_in_as": "Logged in as",
     "expires_at": "Expires at",
+    "timezone": "Timezone",
     "logout": "Logout"
 }

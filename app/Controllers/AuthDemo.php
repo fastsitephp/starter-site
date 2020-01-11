@@ -36,13 +36,15 @@ class AuthDemo
         // See full timezone list here:
         //    https://www.php.net/manual/en/timezones.php
         $expires = null;
+        $timezone = null;
         if (isset($user['exp'])) {
             $l10n = new L10N();
             $l10n->locale($lang);
             $timezone = ini_get('date.timezone');
-            if (is_string($timezone) && $timezone !== '') {
-                $l10n->timezone($timezone);
+            if (!is_string($timezone) || $timezone === '') {
+                $timezone = 'UTC';
             }
+            $l10n->timezone($timezone);
             $expires = $l10n->formatDateTime($user['exp']);
         }
 
@@ -50,6 +52,7 @@ class AuthDemo
         return $app->render('auth-demo.php', [
             'nav_active_link' => 'auth-demo',
             'expires' => $expires,
+            'timezone' => $timezone,
         ]);
     }
 

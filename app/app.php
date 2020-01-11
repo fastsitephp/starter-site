@@ -54,7 +54,7 @@ I18N::setup($app);
  * Defining routes with callback functions allows for fast prototyping
  * and works well when minimal logic is used. As code grows in size it
  * can be organized into controller classes.
- * 
+ *
  * Unlike JavaScript PHP functions do not have access to variables in the
  * parent scope. The [use] keyword as shown below can be used to pass
  * variables from the parent scope.
@@ -85,7 +85,7 @@ $app->get('/:lang', function($lang) use ($app) {
  * Define routes that point to specific Controllers and Methods. The optional
  * config option [controller_root] defined near the top of this file is used
  * to specify the root class namespace.
- * 
+ *
  * The two format options are 'class' and 'class.method'. When using only
  * class name then the route function [route(), get(), post(), put(), etc]
  * will be used for the method name of the matching controller.

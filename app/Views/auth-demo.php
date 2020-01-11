@@ -4,6 +4,7 @@
         <p><?= $app->escape($i18n['logged_in_as']) ?> <strong><?= $app->escape($user['name']) ?></strong></p>
         <?php if ($expires !== null): ?>
             <p><?= $app->escape($i18n['expires_at']) ?> <strong><?= $app->escape($expires) ?></strong></p>
+            <p><?= $app->escape($i18n['timezone']) ?> <strong><?= $app->escape($timezone) ?></strong></p>
         <?php endif ?>
         <p><a class="btn btn-primary" href="<?= $app->rootUrl() . 'auth/logout' ?>/"><?= $app->escape($i18n['logout']) ?></a></p>
     </section>
