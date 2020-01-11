@@ -497,14 +497,12 @@ class Auth
         // valid logins. Basically if the password is not hashed the response
         // would be slightly faster allowing the attacher to know that the login
         // is valid or not. Once an attacker finds a valid login they can move
-        // on and attempt at guessing passwords for the login. This method is
-        // still not perfect because an extra call to [hash()] is made which
-        // is not called if the user is valid, regardless it makes it does
-        // make it harder for a user to guess user accounts and passwords.
+        // on and attempt at guessing passwords for the login.
         $sql = 'SELECT password_hash FROM users WHERE login = ?';
         $hash = $db->queryValue($sql, [$login]);
         if ($hash === null) {
-            $pw->verify($password, $pw->hash($password));
+            $known_hash = '$2y$10$ke4br.Dm0c.LntD3NjCPIuJX.GjW2kHqgeUSd9s1YJSztCNKBn0Fa';
+            $pw->verify($password, $known_hash);
             return false;
         }
 
