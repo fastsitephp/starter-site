@@ -1,0 +1,8 @@
+{
+    "page_title": "Iniciar sesión",
+    "login_error": "Incapaz de iniciar sesión. Verifique su nombre de usuario y contraseña.",
+    "enter_login": "Entrar Iniciar sesión",
+    "enter_password": "Introducir la contraseña",
+    "submit": "Enviar",
+    "unexpected_error": "Error al enviar el formulario, verifique su conexión a Internet o muestre este error para soporte."
+}
