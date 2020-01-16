@@ -64,7 +64,7 @@ sudo bash create-fast-site.sh
 
 ### Supported Versions of PHP
 
-* The FastSitePHP Stater Site works with all versions of PHP from `5.4` to `7.4`.
+* The FastSitePHP Starter Site works with all versions of PHP from `5.4` to `7.4`.
 * The FastSitePHP Framework also supports PHP 5.3.
 * If you need to install the Stater Site on a Server with PHP 5.3 you will need to make some minor changes such as replacing `[]` with `array()` and avoid using PHP Short tags in the templates.
 
@@ -113,7 +113,7 @@ sudo bash create-fast-site.sh
 ## :handshake: Contributing
 
 * If you find a typo or grammar error please fix and submit.
-* If you would like to help with translations then please submit JSON language files in `app_data/i18n`.
+* If you would like to help with translations then please submit the JSON language files in `app_data/i18n`.
 * If you would like to submit any other changes then please open an issue first. This is intended to be a minimal site so adding more code needs a good reason.
 
 ## :memo: License
