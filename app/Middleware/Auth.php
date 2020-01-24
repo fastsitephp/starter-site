@@ -212,7 +212,7 @@ class Auth
             return (new Response($app))
                 ->statusCode(401)
                 ->header('WWW-Authenticate', 'Bearer')
-                ->json(['success' => false, 'authRequired' => true]);
+                ->json(array('success' => false, 'authRequired' => true));
         }
 
         // A login page will be returned if the content-type is not json
@@ -251,12 +251,12 @@ class Auth
         // Define Validation Rules
         $v = new Validator();
         $v
-            ->addRules([
+            ->addRules(array(
                 // The [required] attribute is also handled from the browser
                 // Field,      Title,       Rules
                 ['user',       'User',      'required'],
                 ['password',   'Password',  'required check-user'],
-            ])
+            ))
             ->customRule('check-user', function($password) use ($app, $lang) {
                 // Check User in either Db or with LDAP depending on settings
                 if ($this->type === 'db') {
@@ -280,20 +280,20 @@ class Auth
         if ($errors) {
             $res = new Response($app);
             return $res
-                ->json([
+                ->json(array(
                     'success' => false,
                     'errorMessage' => implode(', ', $errors),
-                ]);
+                ));
         }
 
         // Generic user object to encode.
         // [roles] is included here as an example. All 3 encoded storage methods
         // [ JWT, Signed Data, Encryption ] allow for any object to be encoded
         // so you can define properties that makes sense for your app or site.
-        $user = [
+        $user = array(
             'name' => $_POST['user'],
-            'roles' => ['admin', 'user'],
-        ];
+            'roles' => array('admin', 'user'),
+        );
 
         // Return success JSON Response that contains a Cookie and Response Header
         // with the encoded user object (token) or if using PHP Sessions then
@@ -369,8 +369,8 @@ class Auth
         $pw = new Password();
         $hash = $pw->hash($password);
         $sql = 'INSERT INTO users (login, password_hash) VALUES (?, ?)';
-        $count = $db->execute($sql, [$login, $hash]);
-        return ['rows_added' => $count];
+        $count = $db->execute($sql, array($login, $hash));
+        return array('rows_added' => $count);
     }
 
     /**
@@ -387,8 +387,8 @@ class Auth
         $pw = new Password();
         $hash = $pw->hash($new_password);
         $sql = 'UPDATE users SET password_hash = ? WHERE login = ?';
-        $count = $db->execute($sql, [$hash, $login]);
-        return ['rows_updated' => $count];
+        $count = $db->execute($sql, array($hash, $login));
+        return array('rows_updated' => $count);
     }
 
     /**
@@ -402,8 +402,8 @@ class Auth
     {
         $db = $this->connectToDb($app);
         $sql = 'DELETE FROM users WHERE login = ?';
-        $count = $db->execute($sql, [$login]);
-        return ['rows_deleted' => $count];
+        $count = $db->execute($sql, array($login));
+        return array('rows_deleted' => $count);
     }
 
     /**
@@ -470,7 +470,7 @@ class Auth
             $password = 'Password123';
             $hash = $pw->hash($password);
             $sql = 'INSERT INTO users (login, password_hash) VALUES (?, ?)';
-            $db->execute($sql, [$login, $hash]);
+            $db->execute($sql, array($login, $hash));
         }
         return $db;
     }
@@ -499,7 +499,7 @@ class Auth
         // is valid or not. Once an attacker finds a valid login they can move
         // on and attempt at guessing passwords for the login.
         $sql = 'SELECT password_hash FROM users WHERE login = ?';
-        $hash = $db->queryValue($sql, [$login]);
+        $hash = $db->queryValue($sql, array($login));
         if ($hash === null) {
             $known_hash = '$2y$10$ke4br.Dm0c.LntD3NjCPIuJX.GjW2kHqgeUSd9s1YJSztCNKBn0Fa';
             $pw->verify($password, $known_hash);
@@ -559,7 +559,7 @@ class Auth
     private function loadEnv(Application $app, $required_key)
     {
         $file_path = $app->config['APP_DATA'] . '/.env';
-        $required_vars = [$required_key];
+        $required_vars = array($required_key);
         DotEnv::loadFile($file_path, $required_vars);
     }
 
@@ -667,9 +667,9 @@ class Auth
             session_start();
         }
         if (isset($_SESSION['user_name'])) {
-            $user = [
+            $user = array(
                 'name' => $_SESSION['user_name'],
-            ];
+            );
         }
         return $user;
     }
@@ -793,7 +793,7 @@ class Auth
         $res
             ->cookie($this->cookie_name, $token, $this->cookie_expires, $this->cookie_path, $this->cookie_domain, $this->cookie_secure, $this->cookie_httponly)
             ->header($this->res_auth_header, $token)
-            ->json(['success' => true]);
+            ->json(array('success' => true));
         return $res;
 
         // The above code sends both a cookie and response header for the token.
@@ -817,15 +817,15 @@ class Auth
     private function loginResponseSession(Application $app, array $user)
     {
         if (session_status() !== PHP_SESSION_ACTIVE) {
-            session_start([
+            session_start(array(
                 'cookie_lifetime' => strtotime($this->auth_expires),
                 'cookie_path' => $this->cookie_path,
                 'cookie_domain' => $this->cookie_domain,
                 'cookie_secure' => $this->cookie_secure,
                 'cookie_httponly' => $this->cookie_httponly,
-            ]);
+            ));
         }
         $_SESSION['user_name'] = $user['name'];
-        return (new Response($app))->json(['success' => true]);
+        return (new Response($app))->json(array('success' => true));
     }
 }

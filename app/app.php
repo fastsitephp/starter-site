@@ -76,9 +76,9 @@ $app->get('/:lang', function($lang) use ($app) {
     I18N::langFile('home-page', $lang);
 
     // Render a PHP Template and return the results
-    return $app->render('home-page.php', [
+    return $app->render('home-page.php', array(
         'nav_active_link' => 'home',
-    ]);
+    ));
 });
 
 /**
