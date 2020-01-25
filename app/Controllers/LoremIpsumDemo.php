@@ -24,10 +24,10 @@ class LoremIpsumDemo
         $records = $records['records'];
 
         // Render a PHP Template and return the results
-        return $app->render('lorem-ipsum.php', [
+        return $app->render('lorem-ipsum.php', array(
             'nav_active_link' => 'lorem-ipsum',
             'records' => $records,
-        ]);
+        ));
     }
 
     /**
@@ -47,16 +47,16 @@ class LoremIpsumDemo
             $text2 = LoremIpsum::text();
 
             // Add sample data to the array
-            $records[] = [
+            $records[] = array(
                 'text1' => $text1,
                 'text2' => $text2,
                 'value' => $value,
-            ];
+            );
         }
 
         // Return as Object
-        return [
+        return array(
             'records' => $records,
-        ];
+        );
     }
 }

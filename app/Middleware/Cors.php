@@ -40,11 +40,11 @@ class Cors
     public function acceptAuth(Application $app)
     {
         if (isset($_SERVER['HTTP_ORIGIN']) && $_SERVER['HTTP_ORIGIN'] !== 'null') {
-            $app->cors([
+            $app->cors(array(
                 'Access-Control-Allow-Origin' => $_SERVER['HTTP_ORIGIN'],
                 'Access-Control-Allow-Headers' => 'Authorization, Content-Type',
                 'Access-Control-Allow-Credentials' => 'true',
-            ]);
+            ));
         } else {
             $app->cors('*');
         }

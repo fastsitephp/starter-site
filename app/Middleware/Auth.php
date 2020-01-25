@@ -209,7 +209,8 @@ class Auth
         // For API's and Mobile Apps that submit the request with the
         // [Content-Type: application/json] header return a JSON response.
         if ($req->header('Content-Type') === 'application/json') {
-            return (new Response($app))
+            $res = new Response($app);
+            return $res
                 ->statusCode(401)
                 ->header('WWW-Authenticate', 'Bearer')
                 ->json(array('success' => false, 'authRequired' => true));
@@ -227,7 +228,8 @@ class Auth
 
         // Return login page
         $html = $app->render($this->login_page);
-        return (new Response($app))
+        $res = new Response($app);
+        return $res
             ->statusCode(401)
             ->header('WWW-Authenticate', 'Bearer')
             ->clearCookie($this->cookie_name, $this->cookie_path, $this->cookie_domain, $this->cookie_secure, $this->cookie_httponly)
@@ -826,6 +828,7 @@ class Auth
             ));
         }
         $_SESSION['user_name'] = $user['name'];
-        return (new Response($app))->json(array('success' => true));
+        $res = new Response($app);
+        return $res->json(array('success' => true));
     }
 }
