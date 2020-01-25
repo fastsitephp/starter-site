@@ -255,9 +255,9 @@ class Auth
         $v
             ->addRules(array(
                 // The [required] attribute is also handled from the browser
-                // Field,      Title,       Rules
-                ['user',       'User',      'required'],
-                ['password',   'Password',  'required check-user'],
+                //    Field,        Title,       Rules
+                array('user',       'User',      'required'),
+                array('password',   'Password',  'required check-user'),
             ))
             ->customRule('check-user', function($password) use ($app, $lang) {
                 // Check User in either Db or with LDAP depending on settings
@@ -427,9 +427,12 @@ class Auth
         // modify this class to delete un-used code.
         $file_path = $app->config['APP_DATA'] . '/.env';
         if (!is_file($file_path)) {
-            $content = 'JWT_KEY=' . (new JWT())->generateKey() . "\n";
-            $content .= 'SIGNING_KEY=' . (new SignedData())->generateKey() . "\n";
-            $content .= 'ENCRYPTION_KEY=' . (new Encryption())->generateKey();
+            $jwt = new JWT();
+            $csd = new SignedData();
+            $enc = new Encryption();
+            $content = 'JWT_KEY=' . $jwt->generateKey() . "\n";
+            $content .= 'SIGNING_KEY=' . $csd->generateKey() . "\n";
+            $content .= 'ENCRYPTION_KEY=' . $enc->generateKey();
             file_put_contents($file_path, $content);
         }
 
