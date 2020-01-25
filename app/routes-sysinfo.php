@@ -27,11 +27,11 @@ $app->get('/sysinfo/server', function() use ($app) {
     $res = new Response();
     return $res
         ->contentType('text')
-        ->content(implode("\n", [
+        ->content(implode("\n", array(
             "Host: {$config->fqdn()}",
             "Server IP: {$req->serverIp()}",
             "Network IP: {$config->networkIp()}",
             str_repeat('-', 80),
             $config->networkInfo(),
-        ]));
+        )));
 });
