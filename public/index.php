@@ -39,6 +39,13 @@ $app->setup('UTC');
 // (White Screen of Death) error would occur instead.
 // ------------------------------------------------------------------------------
 
+// If you are editing files on the server and see a generic error page on
+// all routes then the main app file such as `app.php` likely has a syntax
+// error and cannot be parsed. To view the error uncomment the following,
+// however you should consider commenting it out again after fixing the error.
+//
+// $app->show_detailed_errors = true;
+
 require __DIR__ . '/../app/app.php';
 
 // -----------------------------------------------------------

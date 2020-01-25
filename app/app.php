@@ -61,6 +61,16 @@ I18N::setup($app);
  */
 $app->get('/', function() use ($app) {
     $app->redirect($app->rootUrl() . I18N::getUserDefaultLang() . '/');
+
+    // If your server does not support `index.php` as a fallback resource but
+    // still uses it as the default page you can then use the following:
+    /*
+    $root_url = $app->rootUrl();
+    if (stripos($root_url, 'index.php/') === false) {
+        $root_url .= 'index.php/';
+    }
+    $app->redirect($root_url . I18N::getUserDefaultLang() . '/');
+    */
 });
 
 /**
@@ -76,6 +86,7 @@ $app->get('/:lang', function($lang) use ($app) {
     I18N::langFile('home-page', $lang);
 
     // Render a PHP Template and return the results
+    // NOTE - On most versions of PHP (5.4+) you can use `[]` instead of `array()`
     return $app->render('home-page.php', array(
         'nav_active_link' => 'home',
     ));
