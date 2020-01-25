@@ -250,6 +250,12 @@ class Auth
     {
         $this->setupDemo($app);
 
+        // Scope variables for older versions of PHP.
+        // When using newer versions these two variables are not needed
+        // and [$this->*] can be used in the closure.
+        $auth = $this;
+        $type = $this->type;
+
         // Define Validation Rules
         $v = new Validator();
         $v
@@ -259,17 +265,17 @@ class Auth
                 array('user',       'User',      'required'),
                 array('password',   'Password',  'required check-user'),
             ))
-            ->customRule('check-user', function($password) use ($app, $lang) {
+            ->customRule('check-user', function($password) use ($app, $lang, $auth, $type) {
                 // Check User in either Db or with LDAP depending on settings
-                if ($this->type === 'db') {
-                    $is_valid = $this->validateDbUser($app, $_POST['user'], $password);
+                if ($type === 'db') {
+                    $is_valid = $auth->validateDbUser($app, $_POST['user'], $password);
                 } else { // LDAP
-                    $is_valid = $this->validateLdapUser($_POST['user'], $password);
+                    $is_valid = $auth->validateLdapUser($_POST['user'], $password);
                 }
 
                 // If user or password is invalid return an generic error message
                 if (!$is_valid) {
-                    I18N::langFile($this->i18n_file, $lang);
+                    I18N::langFile($auth->i18n_file, $lang);
                     return $app->locals['i18n']['login_error'];
                 }
 
