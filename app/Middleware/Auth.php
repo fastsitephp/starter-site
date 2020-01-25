@@ -496,7 +496,7 @@ class Auth
      * @param string $password
      * @return bool
      */
-    private function validateDbUser($app, $login, $password)
+    public function validateDbUser($app, $login, $password)
     {
         $pw = new Password();
         $db = $this->connectToDb($app);
@@ -529,7 +529,7 @@ class Auth
      * @param string $password
      * @return bool
      */
-    private function validateLdapUser($login, $password)
+    public function validateLdapUser($login, $password)
     {
         // Use Domain specified as the property or if not set then make a
         // DNS call to get the FQDN (fully-qualified domain name) of the server

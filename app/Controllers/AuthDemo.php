@@ -49,11 +49,11 @@ class AuthDemo
         }
 
         // Render Template
-        return $app->render('auth-demo.php', [
+        return $app->render('auth-demo.php', array(
             'nav_active_link' => 'auth-demo',
             'expires' => $expires,
             'timezone' => $timezone,
-        ]);
+        ));
     }
 
     /**
@@ -66,10 +66,10 @@ class AuthDemo
     public function getData(Application $app)
     {
         $req = new \FastSitePHP\Web\Request();
-        return [
+        return array(
             'clientIp' => $req->clientIp('from proxy', 'trust local'),
             'userAgent' => $req->userAgent(),
             'user' => $app->locals['user'],
-        ];
+        );
     }
 }
