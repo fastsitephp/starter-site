@@ -4,6 +4,8 @@ FastSitePHP uses [Semantic Versioning](https://docs.npmjs.com/about-semantic-ver
 
 ## Next Release (Changes on Master Branch)
 
+* Added Mobile Menu
+* Fixed `<html lang>` attribute to use the selected language
 * Added Support for PHP `5.3`. Even though the PHP Group no longer supports PHP 5.3 it is installed on many older servers and some widely used versions of Linux still install it by default.
 
 ## 1.2.0 (January 10, 2020)
