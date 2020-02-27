@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="<?= $app->lang ?>">
+<html lang="<?= $app->lang ?>" dir="auto">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -93,6 +93,9 @@
 						<li<?= ($app->lang === 'pt-BR' ? ' class="active"' : '') ?>>
 							<a href="<?= $app->escape($app->rootUrl() . 'pt-BR' . $current_page) ?>">Português (Brasil)</a>
 						</li>
+                        <li<?= ($app->lang === 'ar' ? ' class="active"' : '') ?>>
+                            <a href="<?= $app->escape($app->rootUrl() . 'ar' . $current_page) ?>">العربية</a>
+                        </li>
 					</ul>
 				</div>
 			</nav>
@@ -135,6 +138,9 @@
 							</li>
 							<li<?= ($app->lang === 'pt-BR' ? ' class="active"' : '') ?>>
 								<a href="<?= $app->escape($app->rootUrl() . 'pt-BR' . $current_page) ?>">Português (Brasil)</a>
+							</li>
+							<li<?= ($app->lang === 'ar' ? ' class="active"' : '') ?>>
+								<a href="<?= $app->escape($app->rootUrl() . 'ar' . $current_page) ?>">العربية</a>
 							</li>
 						</ul>
 					</li>
