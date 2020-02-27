@@ -151,6 +151,7 @@ nav.navbar { text-align:center; }
 
 .nav-item.sub-menu { position:relative; }
 .nav-item.sub-menu div { display:flex; align-items:center; margin-left: 15px; }
+html[dir="rtl"] .nav-item.sub-menu div { margin-left:0; margin-right:15px; }
 .nav-item.sub-menu ul {
     display:none;
     position:absolute;
@@ -164,6 +165,7 @@ nav.navbar { text-align:center; }
 }
 .nav-item.sub-menu span { cursor:help; display: inline-block; padding:10px 15px; font-weight:bold; color: #fff; text-decoration: none; position: relative; }
 .nav-item.sub-menu.i18n-menu ul { right: 0; }
+html[dir="rtl"] .nav-item.sub-menu.i18n-menu ul { right: initial; left:0 }
 .nav-item.sub-menu ul li.active { background-color: #E2E4EF; }
 .nav-item.sub-menu ul li:hover { background-color: #BCC1DB; }
 .nav-item.sub-menu:hover ul { display:block; }
