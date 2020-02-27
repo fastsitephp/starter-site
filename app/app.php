@@ -8,6 +8,7 @@
 // ------------------------------------------------------------------
 
 use FastSitePHP\Lang\I18N;
+use FastSitePHP\Web\Response;
 
 // --------------------------------------------------------------------------------------
 // Site Configuration
@@ -58,9 +59,16 @@ I18N::setup($app);
  * Unlike JavaScript PHP functions do not have access to variables in the
  * parent scope. The [use] keyword as shown below can be used to pass
  * variables from the parent scope.
+ * 
+ * The response header [Vary: Accept-Language] is used for Content
+ * negotiation to let bots know that the content will change based
+ * on language. For example this applies to Googlebot and Bingbot.
  */
 $app->get('/', function() use ($app) {
-    $app->redirect($app->rootUrl() . I18N::getUserDefaultLang() . '/');
+    $res = new Response();
+    return $res
+        ->vary('Accept-Language')
+        ->redirect($app->rootUrl() . I18N::getUserDefaultLang() . '/');
 
     // If your server does not support `index.php` as a fallback resource but
     // still uses it as the default page you can then use the following:
@@ -69,7 +77,10 @@ $app->get('/', function() use ($app) {
     if (stripos($root_url, 'index.php/') === false) {
         $root_url .= 'index.php/';
     }
-    $app->redirect($root_url . I18N::getUserDefaultLang() . '/');
+    $res = new Response();
+    return $res
+        ->vary('Accept-Language')
+        ->redirect($root_url . I18N::getUserDefaultLang() . '/');
     */
 });
 

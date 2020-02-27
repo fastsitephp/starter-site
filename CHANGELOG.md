@@ -2,6 +2,12 @@
 
 FastSitePHP uses [Semantic Versioning](https://docs.npmjs.com/about-semantic-versioning).
 
+## 1.3.1 (February 27, 2020)
+
+* Added `Vary` Response Header with `Accept-Language` on the default route
+* Improved Layout for Mobile Nav Menu Items
+* Fix Mobile Nav Menu to appear on IE 11 for Narrow Layouts
+
 ## 1.3.0 (February 27, 2020)
 
 * Added Mobile Menu

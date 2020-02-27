@@ -42,7 +42,11 @@ body > main {
     --info-color: rgb(42, 75, 124);
 }
 
-/* Use fallback colors for key page elements for IE */
+/*
+    Use fallback colors for key page elements for IE and make minor adjustments as needed.
+    This does not make IE look exactly like modern browsers but it makes it good enough
+    to use the site.
+*/
 @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
     header,
     footer,
@@ -53,10 +57,25 @@ body > main {
     a:visited { color:hsla(204, 21%, 23%, 1); }
 
     .nav-item.active .nav-link,
-    .jumbotron { background-color:hsla(204, 21%, 23%, 1); }
+    .jumbotron,
+    .mobile-menu ul li.active a { background-color:hsla(204, 21%, 23%, 1); }
 
-    .nav-item:not(.active):hover .nav-link { background-color:hsla(204, 21%, 83%, 1); color:rgb(87, 114, 132); }
+    .nav-item:not(.active):hover .nav-link,
+    .mobile-menu ul li:not(.active):hover a { background-color:hsla(204, 21%, 83%, 1); color:rgb(87, 114, 132); }
     .nav-item.active:hover .nav-link { color:rgb(87, 114, 132); }
+
+    .mobile-nav .site-title a,
+    .mobile-nav .open-menu a {
+        background-color: hsla(204, 21%, 93%, 1);
+        background-image: linear-gradient(0deg, #fff 0%, hsla(204, 21%, 93%, 1) 100%);
+    }
+    .mobile-nav .site-title a:hover,
+    .mobile-nav .open-menu a:hover {
+        background-color: hsla(204, 21%, 83%, 1);
+        background-image: linear-gradient(0deg, hsla(204, 21%, 83%, 1) 0%, #fff 100%);
+    }
+
+    .mobile-menu { left: 10px; }
 }
 
 body {
@@ -119,7 +138,7 @@ section { background-color: white; }
 }
 .mobile-menu ul li { width:calc(50% - 20px); margin:10px; max-width:200px; }
 .mobile-menu ul.i18n-menu li { width:100%; text-align:center; max-width:400px; }
-.mobile-menu ul li a { text-decoration:none; font-weight:bold; padding:10px; display:block; }
+.mobile-menu ul li a { text-decoration:none; font-weight:bold; padding:10px 20px; display:block; }
 .mobile-menu ul li.active a {
     background-color: var(--dark-color);
     border-radius:2px;
@@ -137,7 +156,7 @@ section { background-color: white; }
 nav.navbar { text-align:center; }
 .navbar-nav { margin:auto; font-weight:bold; }
 .navbar-nav .nav-link { padding:.5em 2em; color:white; margin:auto 5px; }
-.nav-item.active .nav-link { background-color:var(--dark-color); box-shadow:0 0 1px 2px rgba(0,0,0,.5); }
+.nav-item.active .nav-link { background-color:var(--dark-color); box-shadow:0 0 1px 2px rgba(0,0,0,.5); padding:10px 20px; }
 .nav-item:not(.active):hover .nav-link { background-color:var(--light-color); color:var(--main-color); }
 .nav-item.active:hover .nav-link { color:var(--light-color); }
 .nav.flex-column .nav-item a {
