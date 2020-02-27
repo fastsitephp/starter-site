@@ -179,7 +179,6 @@ html[dir="rtl"] .nav-item.sub-menu.i18n-menu ul { right: initial; left:0 }
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        justify-content: center;
     }
 }
 
