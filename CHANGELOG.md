@@ -2,6 +2,12 @@
 
 FastSitePHP uses [Semantic Versioning](https://docs.npmjs.com/about-semantic-versioning).
 
+## Next Release (Changes on main branch)
+
+* Added support for the Mac-only development environment Laravel Valet
+  * Related to issue https://github.com/fastsitephp/starter-site/issues/4
+  * **Thanks Valentin Ursuleac** https://github.com/ursuleacv for finding and opening this issue!
+
 ## 1.3.1 (February 27, 2020)
 
 * Added `Vary` Response Header with `Accept-Language` on the default route
