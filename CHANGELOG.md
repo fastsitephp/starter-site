@@ -2,7 +2,7 @@
 
 FastSitePHP uses [Semantic Versioning](https://docs.npmjs.com/about-semantic-versioning).
 
-## Next Release (Changes on main branch)
+## 1.3.2 (July 14, 2020)
 
 * Added support for the Mac-only development environment Laravel Valet
   * Related to issue https://github.com/fastsitephp/starter-site/issues/4
