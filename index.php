@@ -24,7 +24,6 @@
 
 if (isset($_SERVER['DOCUMENT_URI']) && strpos($_SERVER['DOCUMENT_URI'], '/laravel/valet/server.php') !== false) {
     require __DIR__ . '/public/index.php';
-    exit();
 } else {
     header('Location: public/');
 }
