@@ -2,6 +2,12 @@
 
 FastSitePHP uses [Semantic Versioning](https://docs.npmjs.com/about-semantic-versioning).
 
+## Next Release (Changes on main branch but not yet published to Composer/Packagist)
+
+* Updated `scripts/install.php` to download and use latest version of `cacert.pem`.
+  * Previous version: `2019-10-16`
+  * New version: `2020-06-24`
+
 ## 1.3.2 (July 14, 2020)
 
 * Added support for the Mac-only development environment Laravel Valet
