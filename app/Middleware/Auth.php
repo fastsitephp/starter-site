@@ -24,12 +24,7 @@ use FastSitePHP\Web\Request;
  * creating secure sites using authentication.
  *
  * This class can be used as-is without any changes or you can remove features
- * that you do not need to reduce the size of the code. If you intend on using
- * this class with a site that has many users spending time to remove un-needed
- * code is recommended because it’s a good practice as it will help you
- * understand the full security of your site and various security options.
- * A good starting point is to search for "$this->method" and "$method" and
- * remove methods and all related code that you do not use.
+ * that you do not need to reduce the size of the code.
  *
  * By default this class uses JSON Web Tokens (JWT) with a 1 hour timeout and
  * session cookie for the storage format. Request and Response headers using a
@@ -163,7 +158,7 @@ class Auth
     private $cookie_expires = 0;
     private $cookie_domain = '';
     private $cookie_secure = false; // Set to [true] if your site only uses HTTPS
-    private $cookie_httponly = false;
+    private $cookie_httponly = false; // Set to [true] to disable client side scripts from accessing the token as a cookie
 
     /**
      * Response Header for the Access Token (JWT, Signed Data, or Encryption).

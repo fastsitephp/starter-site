@@ -5,7 +5,7 @@
         <ul class="nav flex-column d-inline-flex text-left">
             <?php foreach ($links as $link): ?>
             <li class="nav-item">
-                <a href="<?php echo $app->escape($link['url']) ?>" target="_blank">
+                <a href="<?php echo $app->escape($link['url']) ?>" target="_blank" rel="noopener">
                 <?php echo $app->escape($link['title']) ?>
                 </a>
             </li>

@@ -41,6 +41,18 @@ I18N::setup($app);
 //
 // $app->noCache();
 
+// Inclue a CSP (Content-Security-Policy) Response Header for HTML Content.
+// By default this is set to work with the current template using the following rules:
+//   - Only content from the domain can be included.
+//   - For CSS inline [style] attributes can be used and bootstrap CDN can be used.
+//   - Inline <script> tags are blocked because 'unsafe-inline' is not specified as default or for [script-src].
+// Helpfull Links:
+//   https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
+//   https://developers.google.com/web/fundamentals/security/csp
+$app->onRender(function() use ($app) {
+    $app->header('Content-Security-Policy', "default-src 'self'; style-src 'self' 'unsafe-inline' https://stackpath.bootstrapcdn.com;");
+});
+
 // ----------------------------------------------------------------------------
 // Routes
 // FastSitePHP provides a number of different methods of defining routes.

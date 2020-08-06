@@ -4,6 +4,11 @@ FastSitePHP uses [Semantic Versioning](https://docs.npmjs.com/about-semantic-ver
 
 ## Next Release (Changes on main branch but not yet published to Composer/Packagist)
 
+* Added a default `CSP (Content-Security-Policy)` Response Header for HTML Responses
+* Updated Mobile Nav Menu to use only CSS rather than CSS and JavaScript
+* Moved all inline JavaScript `<script>` elements to seperate JavaScript Files
+* Added various code comments related to security options
+* Add support for Auth Example JavaScript Code with IE 11 and Older Browsers
 * Updated `scripts/install.php` to download and use latest version of `cacert.pem`.
   * Previous version: `2019-10-16`
   * New version: `2020-06-24`

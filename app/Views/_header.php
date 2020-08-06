@@ -45,7 +45,8 @@
 					</svg>
 				<span style="margin-left:8px;"><?= $app->escape($i18n['site_title']) ?></span>
 				</a></span>
-				<span class="open-menu"><a href="#">
+				<input type="checkbox" id="menu-toggle">
+				<label class="open-menu" for="menu-toggle">
 					<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 						<g id="Buttons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 							<g id="open-menu" transform="translate(0.000000, -1.000000)" fill="#2e3d47">
@@ -55,10 +56,10 @@
 							</g>
 						</g>
 					</svg>
-				</a></span>
-                <div class="mobile-menu" style="display:none;">
+				</label>
+                <div class="mobile-menu">
                     <div>
-                        <span class="close-menu"><a href="#">
+                        <label class="close-menu" for="menu-toggle">
                             <svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <g id="Buttons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                     <g id="close-menu" fill="#4F5B93">
@@ -67,7 +68,7 @@
                                     </g>
                                 </g>
                             </svg>
-                        </a></span>
+                        </label>
                     </div>
                     <ul>
 						<li class="nav-item <?= (isset($nav_active_link) && $nav_active_link === 'home' ? 'active' : '') ?>">
@@ -146,16 +147,6 @@
 					</li>
 				</ul>
 			</nav>
-			<script>
-				(function() {
-					// Mobile Nav Menu
-					var openMenu = document.querySelector('.mobile-nav .open-menu a');
-					var closeMenu = document.querySelector('.mobile-nav .close-menu');
-					var mobileMenu = document.querySelector('.mobile-menu');
-					openMenu.onclick = function(e) { e.preventDefault(); mobileMenu.style.display = ''; };
-					closeMenu.onclick = function(e) { e.preventDefault(); mobileMenu.style.display = 'none'; };
-				})();
-			</script>
 		</header>
 		<main>
 			<section id="old-browser-warning" style="display:none;">
