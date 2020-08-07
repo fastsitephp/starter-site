@@ -76,6 +76,11 @@ body > main {
     }
     
     .mobile-menu { left: 10px; }
+
+    .btn-primary { background-color: rgb(87, 114, 132); border-color: hsla(204, 21%, 23%, 1); }
+    .btn-primary.disabled, .btn-primary:disabled { background-color: hsla(204, 21%, 83%, 1); border-color: hsla(204, 21%, 83%, 1); }
+
+    .table-striped tbody tr:nth-of-type(odd) { background-color:hsla(204, 21%, 83%, 1); }
 }
 
 body {
