@@ -75,7 +75,8 @@ body > main {
         background-image: linear-gradient(0deg, hsla(204, 21%, 83%, 1) 0%, #fff 100%);
     }
     
-    .mobile-menu { left: 10px; }
+    .mobile-menu { right: 10px; }
+    .open-menu { position: absolute; right:10px; top:10px; }
 
     .btn-primary { background-color: rgb(87, 114, 132); border-color: hsla(204, 21%, 23%, 1); }
     .btn-primary.disabled, .btn-primary:disabled { background-color: hsla(204, 21%, 83%, 1); border-color: hsla(204, 21%, 83%, 1); }
@@ -119,7 +120,7 @@ section { background-color: white; }
 .mobile-nav .site-title a span { margin-left:8px; }
 
 .mobile-menu {
-    display:block;
+    display:none;
     background-color: white;
     box-shadow: 0 1px 5px 0 rgba(0,0,0,.5);
     border-radius: 4px;
@@ -130,8 +131,8 @@ section { background-color: white; }
     margin-left: -5px;
     text-align: right;
 }
-#menu-toggle:not(:checked) ~ .mobile-menu {
-    display:none;
+#menu-toggle:checked ~ .mobile-menu {
+    display:block;
 }
 .mobile-menu .close-menu {
     margin: 20px 35px;
