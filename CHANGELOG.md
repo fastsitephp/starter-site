@@ -5,16 +5,26 @@ FastSitePHP uses [Semantic Versioning](https://docs.npmjs.com/about-semantic-ver
 ## Next Release (Changes on main branch but not yet published to Composer/Packagist)
 
 * Added a default `CSP (Content-Security-Policy)` Response Header for HTML Responses
+  * By default strict rules are used so that only content from the current domain can be included.
+  * A commented example is included to show how to include additional connent.
 * Added default Cookie Attribute for Auth Page: `SameSite = Lax`.
   * Requires FastSitePHP Framework `1.4.0` or higher and only works when using PHP 7.3 or Higher.
-* Updated Mobile Nav Menu to use only CSS rather than CSS and JavaScript
-* Moved all inline JavaScript `<script>` elements to seperate JavaScript Files
+  * Updated `composer.json` file to require FastSitePHP Framework `1.4.0` or higher
+* Updated the Starter Site Bash Install Script to install PHP `7.4` by default instead of `7.2`.
+  * The bash script is part of the main FastSitePHP Repository
+  * https://github.com/fastsitephp/fastsitephp/blob/master/scripts/shell/bash/create-fast-site.sh
+* Moved all inline JavaScript `<script>` elements to seperate JavaScript Files and all CSS inline `style` to style sheets so that the site works with the new strict CSP
 * Added various code comments related to security options
+* Updated Mobile Nav Menu to use only CSS rather than CSS and JavaScript
+* Minor site style updates such as centered text on the mobile nav menu items
 * Add support for Auth Example JavaScript Code with IE 11 and Older Browsers
 * Added a new `css/layout.css` file and used as a default instead of Bootstrap
-  * Bootstrap `4.4.1` remains commented out in the `app\Views\_header.php` file
-  * The CDN version of Bootstrap is about 160 kB of CSS gzipped to 23.9 kB.
+  * Bootstrap remains commented out in the `app/Views/_header.php` file
+  * The CDN version of Bootstrap is about 160 kB of CSS gzipped to 24 kB.
   * The `layout.css` alternative file is less than 4 kB, however it contains only a very limited amount of CSS needed for the starter site.
+  * Updated the commented version of Bootstap from `4.4.1` to `4.5.2`
+* Updated Logout Button and Related API to redirect to the user's selected language rather than the default site language
+* Added meta description tag option in the `app/Views/_header.php` file
 * Updated `scripts/install.php` to download and use latest version of `cacert.pem`.
   * Previous version: `2019-10-16`
   * New version: `2020-06-24`

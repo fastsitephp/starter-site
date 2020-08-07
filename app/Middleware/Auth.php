@@ -20,11 +20,11 @@ use FastSitePHP\Web\Request;
  * Auth Middleware
  *
  * This class is included with the starter site and is intended as a starting
- * point and template for authentication and provides a number of options for
- * creating secure sites using authentication.
- *
- * This class can be used as-is without any changes or you can remove features
- * that you do not need to reduce the size of the code.
+ * point or template for authentication and provides a number of options for
+ * creating secure sites using authentication. This class secure by design and
+ * can be used without making any changes or you can remove features that you
+ * do not need to reduce the size of the code or to help understand various
+ * security options in greater detail.
  *
  * By default this class uses JSON Web Tokens (JWT) with a 1 hour timeout and
  * session cookie for the storage format. Request and Response headers using a
@@ -59,10 +59,11 @@ use FastSitePHP\Web\Request;
  *     validateLdapUser()
  *     How this class is used from [app/app.php], search for "Auth."
  *
- * IMPORTANT - If you end up using this class without making any changes then
- * you MUST change the password on the example Admin user to a secure/strong password.
- * This can be done with a temporary route on your site by copying and modifying the
- * example code below:
+ * IMPORTANT - By default the function [connectToDb()] creates a default user with a
+ * known password for the demo so if you end up using this class without making any
+ * changes then you MUST change the password on the example Admin user to a strong
+ * password or delete the user. This can be done with a temporary route on your site
+ * by copying and modifying the example code below:
  *
  *     $app->get('/admin/update-user', function() use ($app) {
  *         $auth = new \App\Middleware\Auth();
@@ -339,9 +340,10 @@ class Auth
      * of the logic for your app.
      *
      * @param Application $app
+     * @param string|null $lang
      * @return Response
      */
-    public function logout(Application $app)
+    public function logout(Application $app, $lang = null)
     {
         // If using a PHP Session first destory the session
         $cookie_name = null;
@@ -367,6 +369,11 @@ class Auth
                 'httponly' => $this->cookie_httponly,
                 'samesite' => $this->cookie_samesite,
             ));
+        }
+
+        // Redirect to home page or localized home page for the user
+        if ($lang !== null && I18N::hasLang($lang)) {
+            return $res->redirect($app->rootUrl() . $lang . '/');
         }
         return $res->redirect($app->rootUrl());
     }

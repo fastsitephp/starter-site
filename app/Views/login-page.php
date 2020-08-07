@@ -41,7 +41,7 @@
                 class="col mt-4 alert alert-danger"
                 role="alert"
                 id="error-text"
-                style="display:none;"
+                hidden
                 data-default-error="<?= $app->escape($i18n['unexpected_error']) ?>">
             </div>
         </form>

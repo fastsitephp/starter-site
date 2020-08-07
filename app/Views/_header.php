@@ -4,6 +4,9 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<?php if (isset($i18n['meta_description'])): ?>
+			<meta name="description" content="<?= $app->escape($i18n['meta_description']) ?>">
+		<?php endif ?>
 
 		<?php
 		$page_title = (isset($page_title) ? $page_title : null);
@@ -17,11 +20,12 @@
 
 		<!--
 			Either Bootstrap or [layout.css] can be used.
-			  - The CDN version of Bootstrap is about 160 kB of CSS gzipped to 23.9 kB.
+			  - The CDN version of Bootstrap is about 160 kB of CSS gzipped to 24 kB.
 			  - The [layout.css] alternative file is less than 4 kB, however it contains only a very limited amount of CSS needed for the starter site.
-			[site.css] provides the main style style and custom site features
+			[site.css] provides the main style style and custom site features.
+			If using Bootstrap or other CDN links the [Content-Security-Policy] needs to be updated in [app/app.php]
 		-->
-		<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+		<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
 		<link href="<?= $app->rootDir() ?>css/layout.css" rel="stylesheet" />
 		<link href="<?= $app->rootDir() ?>css/site.css" rel="stylesheet" />
 	</head>
@@ -39,20 +43,22 @@
 				}
 			?>
 			<nav class="navbar mobile-nav">
-				<span class="site-title"><a href="<?= $app->rootUrl() . $app->lang ?>/">
-					<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-						<g id="Buttons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-							<g id="home" fill="#2e3d47">
-								<rect id="Rectangle" x="2" y="10" width="12" height="6"></rect>
-								<polygon id="Triangle" points="8 4 14 10 2 10"></polygon>
-								<rect id="Rectangle" transform="translate(11.500000, 4.750000) rotate(45.000000) translate(-11.500000, -4.750000) " x="6" y="4" width="11" height="1.5" rx="0.75"></rect>
-								<rect id="Rectangle" transform="translate(4.500000, 4.750000) scale(-1, 1) rotate(45.000000) translate(-4.500000, -4.750000) " x="-1" y="4" width="11" height="1.5" rx="0.75"></rect>
-								<polygon id="Rectangle" points="12 0 14 0 14 5 12 3"></polygon>
+				<span class="site-title">
+					<a href="<?= $app->rootUrl() . $app->lang ?>/">
+						<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+							<g id="Buttons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+								<g id="home" fill="#2e3d47">
+									<rect id="Rectangle" x="2" y="10" width="12" height="6"></rect>
+									<polygon id="Triangle" points="8 4 14 10 2 10"></polygon>
+									<rect id="Rectangle" transform="translate(11.500000, 4.750000) rotate(45.000000) translate(-11.500000, -4.750000) " x="6" y="4" width="11" height="1.5" rx="0.75"></rect>
+									<rect id="Rectangle" transform="translate(4.500000, 4.750000) scale(-1, 1) rotate(45.000000) translate(-4.500000, -4.750000) " x="-1" y="4" width="11" height="1.5" rx="0.75"></rect>
+									<polygon id="Rectangle" points="12 0 14 0 14 5 12 3"></polygon>
+								</g>
 							</g>
-						</g>
-					</svg>
-				<span style="margin-left:8px;"><?= $app->escape($i18n['site_title']) ?></span>
-				</a></span>
+						</svg>
+						<span><?= $app->escape($i18n['site_title']) ?></span>
+					</a>
+				</span>
 				<input type="checkbox" id="menu-toggle">
 				<label class="open-menu" for="menu-toggle">
 					<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -157,6 +163,6 @@
 			</nav>
 		</header>
 		<main>
-			<section id="old-browser-warning" style="display:none;">
+			<section id="old-browser-warning" hidden>
 				<div class="alert alert-danger" data-content="<?= $app->escape($i18n['old_browser_warning']) ?>"></div>
 			</section>

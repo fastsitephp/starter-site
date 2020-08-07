@@ -74,7 +74,7 @@ body > main {
         background-color: hsla(204, 21%, 83%, 1);
         background-image: linear-gradient(0deg, hsla(204, 21%, 83%, 1) 0%, #fff 100%);
     }
-
+    
     .mobile-menu { left: 10px; }
 }
 
@@ -111,6 +111,7 @@ section { background-color: white; }
     background-image: linear-gradient(0deg, var(--light-color) 0%, #fff 100%);
     border-radius:2px;    
 }
+.mobile-nav .site-title a span { margin-left:8px; }
 
 .mobile-menu {
     display:block;
@@ -136,7 +137,7 @@ section { background-color: white; }
     display:flex;
     flex-wrap:wrap;
     list-style-type:none;
-    text-align:left;
+    text-align:center;
     max-width:400px;
     margin:auto;
     margin-bottom:20px;

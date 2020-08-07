@@ -6,7 +6,7 @@
             <p><?= $app->escape($i18n['expires_at']) ?> <strong><?= $app->escape($expires) ?></strong></p>
             <p><?= $app->escape($i18n['timezone']) ?> <strong><?= $app->escape($timezone) ?></strong></p>
         <?php endif ?>
-        <p><a class="btn btn-primary" href="<?= $app->rootUrl() . 'auth/logout' ?>/"><?= $app->escape($i18n['logout']) ?></a></p>
+        <p><a class="btn btn-primary" href="<?= $app->rootUrl() . $app->lang . '/auth/logout' ?>/"><?= $app->escape($i18n['logout']) ?></a></p>
     </section>
 </div>
 <script src="<?= $app->rootDir() ?>js/auth-demo.js"></script>

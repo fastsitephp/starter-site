@@ -42,15 +42,22 @@ I18N::setup($app);
 // $app->noCache();
 
 // Inclue a CSP (Content-Security-Policy) Response Header for HTML Content.
-// By default this is set to work with the current template using the following rules:
-//   - Only content from the domain can be included.
-//   - For CSS inline [style] attributes can be used and bootstrap CDN can be used.
-//   - Inline <script> tags are blocked because 'unsafe-inline' is not specified as default or for [script-src].
-// Helpfull Links:
+// CSP is used to reduce the risk from cross-site scripting (XSS), clickjacking,
+// and other code injection attacks. Helpfull Links:
 //   https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
 //   https://developers.google.com/web/fundamentals/security/csp
 $app->onRender(function() use ($app) {
-    $app->header('Content-Security-Policy', "default-src 'self'; style-src 'self' 'unsafe-inline' https://stackpath.bootstrapcdn.com;");
+    // By default this is set to work with the current template using strict
+    // rules so that only content from the current domain can be included.
+    $app->header('Content-Security-Policy', "default-src 'self'");
+
+    // For many sites CDN or other links will typically be included.
+    // This example uses the following rules:
+    //   - Only content from the current domain can be included
+    //   - For CSS inline [style] attributes can be used and bootstrap CDN can be used.
+    //   - Inline <script> tags are blocked because 'unsafe-inline' is not specified as default or for [script-src].
+    //
+    // $app->header('Content-Security-Policy', "default-src 'self'; style-src 'self' 'unsafe-inline' https://stackpath.bootstrapcdn.com;");
 });
 
 // ----------------------------------------------------------------------------
@@ -71,7 +78,7 @@ $app->onRender(function() use ($app) {
  * Unlike JavaScript PHP functions do not have access to variables in the
  * parent scope. The [use] keyword as shown below can be used to pass
  * variables from the parent scope.
- * 
+ *
  * The response header [Vary: Accept-Language] is used for Content
  * negotiation to let bots know that the content will change based
  * on language. For example this applies to Googlebot and Bingbot.
@@ -151,6 +158,7 @@ $app->get('/:lang/lorem-ipsum/data', 'LoremIpsumDemo.getData');
  */
 $app->post('/:lang/auth/login', 'Auth.login');
 $app->route('/auth/logout', 'Auth.logout');
+$app->route('/:lang/auth/logout', 'Auth.logout');
 $app->get('/:lang/auth-demo', 'AuthDemo')->filter('Auth.hasAccess');
 
 /**

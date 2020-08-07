@@ -12,7 +12,7 @@
             errorText += ' ' + error;
         }
         el.textContent = errorText;
-        el.style.display = '';
+        el.removeAttribute('hidden');
     }
 
     // Setup once page is ready

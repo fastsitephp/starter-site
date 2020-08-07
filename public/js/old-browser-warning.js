@@ -11,8 +11,8 @@
         var warning = document.getElementById('old-browser-warning');
         var content = warning.querySelector('[data-content]');
         content.textContent = content.getAttribute('data-content');
-        warning.style.display = "";
-        
+        warning.removeAttribute('hidden');
+
         // Disable buttons
         var buttons = document.querySelectorAll('button');
         Array.prototype.forEach.call(buttons, function(button) {

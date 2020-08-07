@@ -1,3 +1,8 @@
+/*
+Styles from here are modified directly based on Bootstrap (MIT License)
+https://getbootstrap.com/
+*/
+
 *, ::after, ::before {
     box-sizing: border-box;
 }
@@ -86,7 +91,7 @@ h1 {
 @media (min-width: 576px) {
     .jumbotron {
         padding: 4rem 2rem;
-    }    
+    }
 }
 
 .btn {
@@ -120,6 +125,10 @@ h1 {
 
 .mb-0 {
     margin-bottom: 0!important;
+}
+
+.mt-4 {
+    margin-top: 1.5rem!important;
 }
 
 .table {
@@ -167,3 +176,10 @@ h1 {
     }
 }
 
+.alert {
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
