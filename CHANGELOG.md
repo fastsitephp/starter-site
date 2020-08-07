@@ -5,10 +5,16 @@ FastSitePHP uses [Semantic Versioning](https://docs.npmjs.com/about-semantic-ver
 ## Next Release (Changes on main branch but not yet published to Composer/Packagist)
 
 * Added a default `CSP (Content-Security-Policy)` Response Header for HTML Responses
+* Added default Cookie Attribute for Auth Page: `SameSite = Lax`.
+  * Requires FastSitePHP Framework `1.4.0` or higher and only works when using PHP 7.3 or Higher.
 * Updated Mobile Nav Menu to use only CSS rather than CSS and JavaScript
 * Moved all inline JavaScript `<script>` elements to seperate JavaScript Files
 * Added various code comments related to security options
 * Add support for Auth Example JavaScript Code with IE 11 and Older Browsers
+* Added a new `css/layout.css` file and used as a default instead of Bootstrap
+  * Bootstrap `4.4.1` remains commented out in the `app\Views\_header.php` file
+  * The CDN version of Bootstrap is about 160 kB of CSS gzipped to 23.9 kB.
+  * The `layout.css` alternative file is less than 4 kB, however it contains only a very limited amount of CSS needed for the starter site.
 * Updated `scripts/install.php` to download and use latest version of `cacert.pem`.
   * Previous version: `2019-10-16`
   * New version: `2020-06-24`

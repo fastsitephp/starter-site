@@ -128,7 +128,7 @@ section { background-color: white; }
     display:none;
 }
 .mobile-menu .close-menu {
-    margin: 15px 35px;
+    margin: 20px 35px;
     display: inline-block;
     cursor: pointer;
 }

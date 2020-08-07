@@ -14,7 +14,15 @@
 		<title><?= $app->escape($i18n['site_title']) ?> | <?= $app->escape($page_title) ?></title>
 		
 		<link rel="shortcut icon" href="<?= $app->rootDir() ?>favicon.ico" />
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+		<!--
+			Either Bootstrap or [layout.css] can be used.
+			  - The CDN version of Bootstrap is about 160 kB of CSS gzipped to 23.9 kB.
+			  - The [layout.css] alternative file is less than 4 kB, however it contains only a very limited amount of CSS needed for the starter site.
+			[site.css] provides the main style style and custom site features
+		-->
+		<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+		<link href="<?= $app->rootDir() ?>css/layout.css" rel="stylesheet" />
 		<link href="<?= $app->rootDir() ?>css/site.css" rel="stylesheet" />
 	</head>
 	<body>

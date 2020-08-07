@@ -159,6 +159,7 @@ class Auth
     private $cookie_domain = '';
     private $cookie_secure = false; // Set to [true] if your site only uses HTTPS
     private $cookie_httponly = false; // Set to [true] to disable client side scripts from accessing the token as a cookie
+    private $cookie_samesite = 'Lax'; // [SameSite] Attribute Requires PHP 7.3 or higher
 
     /**
      * Response Header for the Access Token (JWT, Signed Data, or Encryption).
@@ -227,7 +228,13 @@ class Auth
         return $res
             ->statusCode(401)
             ->header('WWW-Authenticate', 'Bearer')
-            ->clearCookie($this->cookie_name, $this->cookie_path, $this->cookie_domain, $this->cookie_secure, $this->cookie_httponly)
+            ->clearCookie($this->cookie_name, array(
+                'path' => $this->cookie_path,
+                'domain' => $this->cookie_domain,
+                'secure' => $this->cookie_secure,
+                'httponly' => $this->cookie_httponly,
+                'samesite' => $this->cookie_samesite,
+            ))
             ->content($html);
     }
 
@@ -353,7 +360,13 @@ class Auth
         // Return a response that clears the cookie and redirects to site root URL
         $res = new Response($app);
         if ($cookie_name !== null) {
-            $res->clearCookie($cookie_name, $this->cookie_path, $this->cookie_domain, $this->cookie_secure, $this->cookie_httponly);
+            $res->clearCookie($cookie_name, array(
+                'path' => $this->cookie_path,
+                'domain' => $this->cookie_domain,
+                'secure' => $this->cookie_secure,
+                'httponly' => $this->cookie_httponly,
+                'samesite' => $this->cookie_samesite,
+            ));
         }
         return $res->redirect($app->rootUrl());
     }
@@ -711,7 +724,14 @@ class Auth
             default:
                 throw new \Exception('Programming Error - Unknown Method');
         }
-        $app->cookie($this->cookie_name, $value, $this->cookie_expires, $this->cookie_path, $this->cookie_domain, $this->cookie_secure, $this->cookie_httponly);
+        $app->cookie($this->cookie_name, $value, array(
+            'expires' => $this->cookie_expires,
+            'path' => $this->cookie_path,
+            'domain' => $this->cookie_domain,
+            'secure' => $this->cookie_secure,
+            'httponly' => $this->cookie_httponly,
+            'samesite' => $this->cookie_samesite,
+        ));
 
         // For API's and Mobile Apps the Access Token can be read from a Response Header
         $app->header($this->res_auth_header, $value);
@@ -795,9 +815,18 @@ class Auth
      */
     private function loginResponse(Application $app, $token)
     {
+        $options = array(
+            'expires' => $this->cookie_expires,
+            'path' => $this->cookie_path,
+            'domain' => $this->cookie_domain,
+            'secure' => $this->cookie_secure,
+            'httponly' => $this->cookie_httponly,
+            'samesite' => $this->cookie_samesite,
+        );
+
         $res = new Response($app);
         $res
-            ->cookie($this->cookie_name, $token, $this->cookie_expires, $this->cookie_path, $this->cookie_domain, $this->cookie_secure, $this->cookie_httponly)
+            ->cookie($this->cookie_name, $token, $options)
             ->header($this->res_auth_header, $token)
             ->json(array('success' => true));
         return $res;
@@ -806,9 +835,9 @@ class Auth
         // If only a cookie is needed for a website then helper functions can be
         // used instead the using [Crypto] class directly. Example:
         //
-        // $res->jwtCookie($this->cookie_name, $user, $this->auth_expires, $this->cookie_expires, ...)
-        // $res->signedCookie($this->cookie_name, $user, $this->auth_expires, $this->cookie_expires, ...)
-        // $res->encryptedCookie($this->cookie_name, $user, $this->cookie_expires, ...);
+        // $res->jwtCookie($this->cookie_name, $user, $this->auth_expires, $this->$options);
+        // $res->signedCookie($this->cookie_name, $user, $this->auth_expires, $this->$options);
+        // $res->encryptedCookie($this->cookie_name, $user, $this->$options);
     }
 
     /**
@@ -823,13 +852,18 @@ class Auth
     private function loginResponseSession(Application $app, array $user)
     {
         if (session_status() !== PHP_SESSION_ACTIVE) {
-            session_start(array(
+            $options = array(
                 'cookie_lifetime' => strtotime($this->auth_expires),
                 'cookie_path' => $this->cookie_path,
                 'cookie_domain' => $this->cookie_domain,
                 'cookie_secure' => $this->cookie_secure,
                 'cookie_httponly' => $this->cookie_httponly,
-            ));
+            );
+            if (PHP_VERSION_ID >= 70300) {
+                // PHP 7.3+
+                $options['cookie_samesite'] = $this->cookie_samesite;
+            }
+            session_start($options);
         }
         $_SESSION['user_name'] = $user['name'];
         $res = new Response($app);
