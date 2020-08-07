@@ -55,6 +55,7 @@ A bash script is available for a quick setup of a Web Server (Apache or nginx), 
 
 Supported Operating Systems (more will be added in the future):
 
+* Ubuntu 16.04 LTS
 * Ubuntu 18.04 LTS
 
 ~~~bash

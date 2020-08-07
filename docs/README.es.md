@@ -37,6 +37,7 @@ Un script bash está disponible para una configuración rápida de un servidor w
 
 Sistemas operativos compatibles (se agregarán más en el futuro):
 
+* Ubuntu 16.04 LTS
 * Ubuntu 18.04 LTS
 
 ~~~bash
