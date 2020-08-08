@@ -98,6 +98,7 @@
 							<a class="nav-link" href="<?= $app->rootUrl() . $app->lang ?>/auth-demo"><?= $app->escape($i18n['menu_auth_demo']) ?></a>
 						</li>
 					</ul>
+					<hr>
 					<ul class="i18n-menu">
 						<li<?= ($app->lang === 'en' ? ' class="active"' : '') ?>>
 							<a href="<?= $app->escape($app->rootUrl() . 'en' . $current_page) ?>">English</a>

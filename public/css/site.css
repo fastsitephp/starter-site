@@ -148,7 +148,7 @@ section { background-color: white; }
     margin:auto;
     margin-bottom:20px;
 }
-.mobile-menu ul li { width:calc(50% - 20px); margin:10px; max-width:200px; }
+.mobile-menu ul li { width:calc(50% - 30px); margin:10px 15px; max-width:200px; }
 .mobile-menu ul.i18n-menu li { width:100%; text-align:center; max-width:400px; }
 .mobile-menu ul li a { text-decoration:none; font-weight:bold; padding:10px 20px; display:block; }
 .mobile-menu ul li.active a {
@@ -163,6 +163,12 @@ section { background-color: white; }
 }
 .mobile-menu ul li.active:hover a {
     color: var(--light-color);
+}
+.mobile-menu hr {
+    margin: 0 auto 20px;
+    width: calc(100% - 30px);
+    max-width: 380px;
+    border-top: 2px solid var(--main-color);
 }
 
 nav.navbar { text-align:center; }
