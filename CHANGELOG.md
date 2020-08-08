@@ -2,7 +2,7 @@
 
 FastSitePHP uses [Semantic Versioning](https://docs.npmjs.com/about-semantic-versioning).
 
-## Next Release (Changes on main branch but not yet published to Composer/Packagist)
+## 1.4.0 (August 7, 2020)
 
 * Added a default `CSP (Content-Security-Policy)` Response Header for HTML Responses
   * By default strict rules are used so that only content from the current domain can be included.
