@@ -37,8 +37,14 @@ Un script bash está disponible para una configuración rápida de un servidor w
 
 Sistemas operativos compatibles (se agregarán más en el futuro):
 
-* Ubuntu 16.04 LTS
+* Ubuntu 20.04 LTS
 * Ubuntu 18.04 LTS
+* Ubuntu 16.04 LTS
+
+Confirmed Cloud Enviroments:
+
+* `Amazon AWS Lightsail` with user `ubuntu`
+* `DigitalOcean` with user `root`
 
 ~~~bash
 wget https://www.fastsitephp.com/downloads/create-fast-site.sh

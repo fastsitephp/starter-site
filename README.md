@@ -55,8 +55,14 @@ A bash script is available for a quick setup of a Web Server (Apache or nginx), 
 
 Supported Operating Systems (more will be added in the future):
 
-* Ubuntu 16.04 LTS
+* Ubuntu 20.04 LTS
 * Ubuntu 18.04 LTS
+* Ubuntu 16.04 LTS
+
+Confirmed Cloud Enviroments:
+
+* `Amazon AWS Lightsail` with user `ubuntu`
+* `DigitalOcean` with user `root`
 
 ~~~bash
 wget https://www.fastsitephp.com/downloads/create-fast-site.sh

@@ -13,6 +13,7 @@ FastSitePHP uses [Semantic Versioning](https://docs.npmjs.com/about-semantic-ver
 * Updated the Starter Site Bash Install Script to install PHP `7.4` by default instead of `7.2`.
   * The bash script is part of the main FastSitePHP Repository
   * https://github.com/fastsitephp/fastsitephp/blob/master/scripts/shell/bash/create-fast-site.sh
+  * Added support for `Ubuntu 20.04 LTS` - tested on [DigitalOcean](https://www.digitalocean.com/)
   * Confirmed that the script works with `Ubuntu 16.04 LTS` for both Apache and nginx
 * Moved all inline JavaScript `<script>` elements to seperate JavaScript Files and all CSS inline `style` to style sheets so that the site works with the new strict CSP
 * Added various code comments related to security options
