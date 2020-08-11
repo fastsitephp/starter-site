@@ -120,7 +120,9 @@ sudo bash create-fast-site.sh
 
 FastSitePHP’s Starter Site is designed to provide strong security using best practices and high performance with the initial template. When using [Chrome DevTools Lighthouse](https://developers.google.com/web/tools/lighthouse) the Starter Site will score 100 in website categories for both Mobile and Desktop. On tested Cloud Systems using low cost servers a score of 100 is also achieved.
 
-![Chrome DevTools Lighthouse](https://raw.githubusercontent.com/fastsitephp/static-files/master/img/starter_site/2020-08-07/Chrome-DevTools-Lighthouse.png)
+![Chrome DevTools Lighthouse](https://raw.githubusercontent.com/fastsitephp/static-files/master/img/starter_site/2020-08-10/Chrome-DevTools-Lighthouse-Desktop.png)
+
+![Chrome DevTools Network](https://raw.githubusercontent.com/fastsitephp/static-files/master/img/starter_site/2020-08-10/Chrome-DevTools-Network.png)
 
 ## :handshake: Contributing
 
