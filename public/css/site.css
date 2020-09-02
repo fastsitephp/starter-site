@@ -173,8 +173,8 @@ section { background-color: white; }
 
 nav.navbar { text-align:center; }
 .navbar-nav { margin:auto; font-weight:bold; }
-.navbar-nav .nav-link { padding:.5em 2em; color:white; margin:auto 5px; }
-.nav-item.active .nav-link { background-color:var(--dark-color); box-shadow:0 0 1px 2px rgba(0,0,0,.5); padding:10px 20px; }
+.navbar-nav .nav-link { padding:.5em 2em; color:white; margin:.2em .5em 0; }
+.desktop-nav .nav-item.active .nav-link { background-color:var(--dark-color); box-shadow:0 0 1px 2px rgba(0,0,0,.5); }
 .nav-item:not(.active):hover .nav-link { background-color:var(--light-color); color:var(--main-color); }
 .nav-item.active:hover .nav-link { color:var(--light-color); }
 .nav.flex-column .nav-item a {

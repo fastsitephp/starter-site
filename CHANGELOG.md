@@ -2,6 +2,13 @@
 
 FastSitePHP uses [Semantic Versioning](https://docs.npmjs.com/about-semantic-versioning).
 
+## 1.4.1 (September 2, 2020)
+
+* Minor CSS Updates for Nav Menu
+  * Desktop - Padding is consistant on active and regular menu
+  * Desktop - Top margin update by several pixels
+  * Mobile - Easier editing of CSS for padding
+
 ## 1.4.0 (August 7, 2020)
 
 * Added a default `CSP (Content-Security-Policy)` Response Header for HTML Responses
