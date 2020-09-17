@@ -71,9 +71,13 @@
                         // Check the result
                         var data = JSON.parse(http.responseText);
                         if (data.success) {
-                            // A Valid Login will result in a Coookie being
-                            // sent with the response so simply re-load the
-                            // page and the requested page will show.
+                            // A Valid Login will result in a Coookie being sent with the response
+                            // so simply re-load the page and the requested page will show.
+                            //
+                            // NOTE - `reload()` is now deprecated so some editors such as VS Code
+                            // will show a line through it, however it is still included here because
+                            // it improves the behavior for older Browsers. For example when using
+                            // `reload(true)` IE 11 will send a [Cache-Control: no-cache] Request Header.
                             window.location.reload(true);
                         } else {
                             showError(data);
