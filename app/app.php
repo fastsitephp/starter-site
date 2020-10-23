@@ -163,7 +163,7 @@ $app->get('/:lang/auth-demo', 'AuthDemo')->filter('Auth.hasAccess');
 
 /**
  * The Auth API demo JSON Service can be tested from a HTTP Client
- * or App such as Postman or Postwoman. You can also view it from your
+ * or App such as Postman or Hoppscotch. You can also view it from your
  * browser once you login.
  *
  * To test from an HTTP Client add the following request headers when submitting the request:
