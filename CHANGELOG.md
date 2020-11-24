@@ -22,7 +22,7 @@ FastSitePHP uses [Semantic Versioning](https://docs.npmjs.com/about-semantic-ver
   * https://github.com/fastsitephp/fastsitephp/blob/master/scripts/shell/bash/create-fast-site.sh
   * Added support for `Ubuntu 20.04 LTS` - tested on [DigitalOcean](https://www.digitalocean.com/)
   * Confirmed that the script works with `Ubuntu 16.04 LTS` for both Apache and nginx
-* Moved all inline JavaScript `<script>` elements to seperate JavaScript Files and all CSS inline `style` to style sheets so that the site works with the new strict CSP
+* Moved all inline JavaScript `<script>` elements to separate JavaScript Files and all CSS inline `style` to style sheets so that the site works with the new strict CSP
 * Added various code comments related to security options
 * Updated Mobile Nav Menu to use only CSS rather than CSS and JavaScript
 * Minor site style updates such as centered text on the mobile nav menu items
