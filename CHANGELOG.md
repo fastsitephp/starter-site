@@ -5,7 +5,7 @@ FastSitePHP uses [Semantic Versioning](https://docs.npmjs.com/about-semantic-ver
 ## 1.4.1 (September 2, 2020)
 
 * Minor CSS Updates for Nav Menu
-  * Desktop - Padding is consistant on active and regular menu
+  * Desktop - Padding is consistent on active and regular menu
   * Desktop - Top margin update by several pixels
   * Mobile - Easier editing of CSS for padding
 
@@ -13,7 +13,7 @@ FastSitePHP uses [Semantic Versioning](https://docs.npmjs.com/about-semantic-ver
 
 * Added a default `CSP (Content-Security-Policy)` Response Header for HTML Responses
   * By default strict rules are used so that only content from the current domain can be included.
-  * A commented example is included to show how to include additional connent.
+  * A commented example is included to show how to include additional content.
 * Added default Cookie Attribute for Auth Page: `SameSite = Lax`.
   * Requires FastSitePHP Framework `1.4.0` or higher and only works when using PHP 7.3 or Higher.
   * Updated `composer.json` file to require FastSitePHP Framework `1.4.0` or higher
@@ -31,7 +31,7 @@ FastSitePHP uses [Semantic Versioning](https://docs.npmjs.com/about-semantic-ver
   * Bootstrap remains commented out in the `app/Views/_header.php` file
   * The CDN version of Bootstrap is about 160 kB of CSS gzipped to 24 kB.
   * The `layout.css` alternative file is less than 4 kB, however it contains only a very limited amount of CSS needed for the starter site.
-  * Updated the commented version of Bootstap from `4.4.1` to `4.5.2`
+  * Updated the commented version of Bootstrap from `4.4.1` to `4.5.2`
 * Updated Logout Button and Related API to redirect to the user's selected language rather than the default site language
 * Added meta description tag option in the `app/Views/_header.php` file
 * Updated `scripts/install.php` to download and use latest version of `cacert.pem`.
@@ -66,14 +66,14 @@ FastSitePHP uses [Semantic Versioning](https://docs.npmjs.com/about-semantic-ver
   * Login Page
 * Site - Added i18n nav menu
 * Site - Added `Env->loadDotEnv()` middleware function and additional usage docs for the `Env` middleware
-* Site - Updated `Bootstap` Version from `4.3.1` to `4.4.1`
+* Site - Updated `Bootstrap` Version from `4.3.1` to `4.4.1`
 * Scripts - Added Bash Template Script for Syncing Site updates: `starter-site\scripts\sync-server.sh`
 * Documentation - Added Directory Structure to the main readme file
 * Documentation - Added `es` and `pt-BR` translations for the readme file
 
 ## 1.1.2 (December 16, 2019)
 
-* Brazilian Portuguese [pt-BR] language tranlations added
+* Brazilian Portuguese [pt-BR] language translations added
   * **Thanks Marcelo dos Santos Mafra!** https://github.com/msmafra
 * Updated [install.php] to use to use the most recent release of FastSitePHP and to provide an exit error code if the script files.
 
