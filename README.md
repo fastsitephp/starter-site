@@ -59,7 +59,7 @@ Supported Operating Systems (more will be added in the future):
 * Ubuntu 18.04 LTS
 * Ubuntu 16.04 LTS
 
-Confirmed Cloud Enviroments:
+Confirmed Cloud Environments:
 
 * `Amazon AWS Lightsail` with user `ubuntu`
 * `DigitalOcean` with user `root`
@@ -71,7 +71,7 @@ sudo bash create-fast-site.sh
 
 ### Supported Versions of PHP
 
-* The FastSitePHP Starter Site works with all versions of PHP from `5.3` to `8.0 (Beta 1)`.
+* The FastSitePHP Starter Site works with all versions of PHP from `5.3` to `8.0`.
 * If you need to install the Starter Site on a Server with PHP 5.3 you will need to set the `short_open_tag = On` on your server's `php.ini` file.
 
 ### Directory Structure
