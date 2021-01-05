@@ -41,9 +41,9 @@ I18N::setup($app);
 //
 // $app->noCache();
 
-// Inclue a CSP (Content-Security-Policy) Response Header for HTML Content.
-// CSP is used to reduce the risk from cross-site scripting (XSS), clickjacking,
-// and other code injection attacks. Helpfull Links:
+// Include a CSP (Content-Security-Policy) Response Header for HTML Content.
+// CSP is used to reduce the risk from cross-site scripting (XSS), click-jacking,
+// and other code injection attacks. Helpful Links:
 //   https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
 //   https://developers.google.com/web/fundamentals/security/csp
 $app->onRender(function() use ($app) {
@@ -52,7 +52,7 @@ $app->onRender(function() use ($app) {
     $app->header('Content-Security-Policy', "default-src 'self'");
 
     // For many sites CDN or other links will typically be included.
-    // This example uses the following rules:
+    // The below example uses the following rules:
     //   - Only content from the current domain can be included
     //   - For CSS inline [style] attributes can be used and bootstrap CDN can be used.
     //   - Inline <script> tags are blocked because 'unsafe-inline' is not specified as default or for [script-src].
@@ -132,7 +132,7 @@ $app->get('/:lang', function($lang) use ($app) {
  * will be used for the method name of the matching controller.
  *
  * Controller Classes are defined in the folder/directory [app/Controllers]
- * because the PHP Autloader maps the [app] directory to the [App] namespace
+ * because the PHP Autoloader maps the [app] directory to the [App] namespace
  * when classes are loaded.
  */
 $app->get('/:lang/resources', 'Resources');
@@ -171,7 +171,7 @@ $app->get('/:lang/auth-demo', 'AuthDemo')->filter('Auth.hasAccess');
  *   Content-Type: application/json
  *   Authorization:  Bearer {access-token}
  *
- * A valid {access-token} can be deteremined from the 'X-Access-Token' Response Header
+ * A valid {access-token} can be determined from the 'X-Access-Token' Response Header
  * from the Login Service. Full example with the default demo user:
  *
  *   1) First view the API Service without a Login:
@@ -185,7 +185,7 @@ $app->get('/:lang/auth-demo', 'AuthDemo')->filter('Auth.hasAccess');
  *
  *   2) Login:
  *        POST /en/auth/login
- *      Include Requst Header:
+ *      Include Request Header:
  *        Content-Type: application/x-www-form-urlencoded
  *      Include Form Fields:
  *        user: Admin
