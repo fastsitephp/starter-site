@@ -2,6 +2,10 @@
 
 FastSitePHP uses [Semantic Versioning](https://docs.npmjs.com/about-semantic-versioning).
 
+## Next release
+
+* Updated install script to run on a basic Mac PHP setup. Mac currently includes PHP by default, however `ZipArchive` is not enabled by default so an update to call `unzip` from command line solves the issue.
+
 ## 1.4.1 (September 2, 2020)
 
 * Minor CSS Updates for Nav Menu
