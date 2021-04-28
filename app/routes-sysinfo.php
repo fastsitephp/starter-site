@@ -12,7 +12,7 @@ $app->get('/sysinfo/phpinfo', function() {
     phpinfo();
 
     // The info displayed can be changed. This example shows everything but
-    // Environment Variables. If you use [phpinfo()] and are saving senstive 
+    // Environment Variables. If you use [phpinfo()] and are saving sensitive 
     // information in environment variables then you may want hide environment info.
     //
     //     http://php.net/manual/en/function.phpinfo.php
