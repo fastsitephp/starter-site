@@ -34,7 +34,7 @@ use FastSitePHP\Web\Request;
  * property of this class.
  *
  * A new token/cookie will be sent to the client with each response so that the
- * user can keep browswing the site as long as they remain active within the
+ * user can keep browsing the site as long as they remain active within the
  * expiration time.
  *
  * When first used this class will create a [.env] file with secure config settings,
@@ -142,7 +142,7 @@ class Auth
     private $domain = null;
 
     /**
-     * Cookie Setings
+     * Cookie Settings
      *
      * Using [$cookie_expires = 0] so that the cookie lasts only for the session.
      * It will be cleared when the user closes the browser, however browsers will often
@@ -345,7 +345,7 @@ class Auth
      */
     public function logout(Application $app, $lang = null)
     {
-        // If using a PHP Session first destory the session
+        // If using a PHP Session first destroy the session
         $cookie_name = null;
         if ($this->method === 'ses') {
             if (session_status() !== PHP_SESSION_ACTIVE) {
