@@ -2,6 +2,10 @@
 
 FastSitePHP uses [Semantic Versioning](https://docs.npmjs.com/about-semantic-versioning).
 
+## 1.4.3 (January 5, 2022)
+
+* Added Support for PHP 8.1
+
 ## 1.4.2 (April 27, 2021)
 
 * Updated install script to run on a basic Mac PHP setup. Mac currently includes PHP by default, however `ZipArchive` is not enabled by default so an update to call `unzip` from command line solves the issue.
