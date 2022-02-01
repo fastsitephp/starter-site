@@ -22,7 +22,7 @@
 
 **This is the main Starter Site for FastSitePHP.** It includes several examples pages and provides a basic directory/file structure. The site is designed to provide structure for basic content (JavaScript, CSS, etc) while remaining small in size so that it is easy to remove files you don’t need and customize it for your site.
 
-## :rocket: Getting Started
+## 🚀 Getting Started
 
 **Getting started with PHP and FastSitePHP is extremely easy.** If you do not have PHP installed then see instructions for Windows, Mac, and Linux on the getting started page:
 
@@ -108,7 +108,7 @@ sudo bash create-fast-site.sh
 └── vendor
 ```
 
-## :desktop_computer: Starter Site Print Screens (Screenshots)
+## 🖥️ Starter Site Print Screens (Screenshots)
 
 ![Starter Site Home Page](https://raw.githubusercontent.com/fastsitephp/static-files/master/img/starter_site/2020-01-10/home-page.png)
 
@@ -116,7 +116,7 @@ sudo bash create-fast-site.sh
 
 ![Starter Site Login Page](https://raw.githubusercontent.com/fastsitephp/static-files/master/img/starter_site/2020-01-10/login-page.png)
 
-## :lock: :rocket: Security and Performance
+## 🔒 🚀 Security and Performance
 
 FastSitePHP’s Starter Site is designed to provide strong security using best practices and high performance with the initial template. When using [Chrome DevTools Lighthouse](https://developers.google.com/web/tools/lighthouse) the Starter Site will score 100 in website categories for both Mobile and Desktop. On tested Cloud Systems using low cost servers a score of 100 is also achieved.
 
@@ -124,12 +124,12 @@ FastSitePHP’s Starter Site is designed to provide strong security using best p
 
 ![Chrome DevTools Network](https://raw.githubusercontent.com/fastsitephp/static-files/master/img/starter_site/2020-08-10/Chrome-DevTools-Network.png)
 
-## :handshake: Contributing
+## 🤝 Contributing
 
 * If you find a typo or grammar error please fix and submit.
 * If you would like to help with translations then please submit the JSON language files in `app_data/i18n`.
 * If you would like to submit any other changes then please open an issue first. This is intended to be a minimal site so adding more code needs a good reason.
 
-## :memo: License
+## 📝 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

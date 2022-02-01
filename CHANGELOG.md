@@ -2,6 +2,12 @@
 
 FastSitePHP uses [Semantic Versioning](https://docs.npmjs.com/about-semantic-versioning).
 
+## 1.4.4 (February 1, 2022)
+
+* Commented out the default `CSP (Content-Security-Policy)` and added additional code comments on the topic.
+  * This feature was found to be difficult for initial development when developers try FastSitePHP for the first and are not aware of or do not use CSP.
+  * The original code is still in the file but commented out so it is still easy for developers to add CSP to a site.
+
 ## 1.4.3 (January 5, 2022)
 
 * Added Support for PHP 8.1

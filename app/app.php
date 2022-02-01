@@ -46,9 +46,19 @@ I18N::setup($app);
 // and other code injection attacks. Helpful Links:
 //   https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
 //   https://developers.google.com/web/fundamentals/security/csp
+//
+// Uncomment the code block to turn this feature on. Currently this feature is
+// commented out by default to allow for easier initial development for developers
+// when testing or developing with the Starter Site. If you publish a site that
+// allows users to enter comments or other content then researching and
+// implementing CSP for your site is recommended because it can help
+// prevent users from creating malicious content.
+/*
 $app->onRender(function() use ($app) {
     // By default this is set to work with the current template using strict
     // rules so that only content from the current domain can be included.
+    // This is a very strict policy so it even blocks inline styles such as
+    // <style> and <div style="...."> from being used on a site.
     $app->header('Content-Security-Policy', "default-src 'self'");
 
     // For many sites CDN or other links will typically be included.
@@ -59,6 +69,7 @@ $app->onRender(function() use ($app) {
     //
     // $app->header('Content-Security-Policy', "default-src 'self'; style-src 'self' 'unsafe-inline' https://stackpath.bootstrapcdn.com;");
 });
+*/
 
 // ----------------------------------------------------------------------------
 // Routes
