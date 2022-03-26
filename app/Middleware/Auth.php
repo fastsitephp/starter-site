@@ -711,7 +711,7 @@ class Auth
     {
         // Build a and set a new cookie, this will extend the expiration time
         // based on that last page view. This assumes that the controller
-        // sends a reponse using [$app->render()] or creates a response object
+        // sends a response using [$app->render()] or creates a response object
         // with cookies from the $app by using [new Response($app)].
         switch ($this->method) {
             case 'jwt':

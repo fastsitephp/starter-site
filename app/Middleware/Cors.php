@@ -11,7 +11,7 @@ use FastSitePHP\Application;
  * common options for CORS Services. Use this class with route filter callback
  * functions so that the OPTIONS request can be handled.
  *
- * This class is desinged to be easy to use without making changes and also
+ * This class is designed to be easy to use without making changes and also
  * easy to modify if you need to handle custom CORS options for your site.
  *
  * @link https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS
