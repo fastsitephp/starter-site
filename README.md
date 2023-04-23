@@ -55,6 +55,7 @@ A bash script is available for a quick setup of a Web Server (Apache or nginx), 
 
 Supported Operating Systems (more will be added in the future):
 
+* Ubuntu 22.04 LTS
 * Ubuntu 20.04 LTS
 * Ubuntu 18.04 LTS
 * Ubuntu 16.04 LTS
@@ -71,7 +72,7 @@ sudo bash create-fast-site.sh
 
 ### Supported Versions of PHP
 
-* The FastSitePHP Starter Site works with all versions of PHP from `5.3` to `8.1`.
+* The FastSitePHP Starter Site works with all versions of PHP from `5.3` to `8.2`.
 * If you need to install the Starter Site on a Server with PHP 5.3 you will need to set the `short_open_tag = On` on your server's `php.ini` file.
 
 ### Directory Structure

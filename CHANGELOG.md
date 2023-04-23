@@ -2,6 +2,10 @@
 
 FastSitePHP uses [Semantic Versioning](https://docs.npmjs.com/about-semantic-versioning).
 
+## 1.5.0 (April 23, 2023)
+
+* Added Support for PHP 8.2
+
 ## 1.4.4 (February 1, 2022)
 
 * Commented out the default `CSP (Content-Security-Policy)` and added additional code comments on the topic.
