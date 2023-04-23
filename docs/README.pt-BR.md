@@ -37,6 +37,7 @@ Um script bash está disponível para uma configuração rápida de um servidor 
 
 Sistemas Operacionais Suportados (mais serão adicionados no futuro):
 
+* Ubuntu 22.04 LTS
 * Ubuntu 20.04 LTS
 * Ubuntu 18.04 LTS
 * Ubuntu 16.04 LTS
