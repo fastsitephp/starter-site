@@ -72,7 +72,7 @@ sudo bash create-fast-site.sh
 
 ### Supported Versions of PHP
 
-* The FastSitePHP Starter Site works with all versions of PHP from `5.3` to `8.2`.
+* The FastSitePHP Starter Site works with all versions of PHP from `5.3` to `8.3`.
 * If you need to install the Starter Site on a Server with PHP 5.3 you will need to set the `short_open_tag = On` on your server's `php.ini` file.
 
 ### Directory Structure
