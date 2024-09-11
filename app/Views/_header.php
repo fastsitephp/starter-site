@@ -30,7 +30,7 @@
         <script nomodule>
             var link = document.createElement('link');
             link.rel = 'stylesheet';
-            link.href = '<?= $app->rootDir() ?>site-ie.css';
+            link.href = '<?= $app->rootDir() ?>css/site-ie.css';
             document.head.appendChild(link);
         </script>
 	</head>
