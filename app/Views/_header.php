@@ -3,7 +3,6 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<?php if (isset($i18n['meta_description'])): ?>
 			<meta name="description" content="<?= $app->escape($i18n['meta_description']) ?>">
 		<?php endif ?>
@@ -28,6 +27,12 @@
 		<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
 		<link href="<?= $app->rootDir() ?>css/layout.css" rel="stylesheet" />
 		<link href="<?= $app->rootDir() ?>css/site.css" rel="stylesheet" />
+        <script nomodule>
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = '<?= $app->rootDir() ?>site-ie.css';
+            document.head.appendChild(link);
+        </script>
 	</head>
 	<body>
 		<header>

@@ -1,0 +1,42 @@
+/*
+    CSS Variables are supported in modern browsers but not IE 11.
+    Use fallback colors for key page elements for IE and make minor adjustments as needed.
+    This does not make IE look exactly like modern browsers but it makes it good enough
+    to use the site.
+*/
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+    header,
+    footer,
+    .nav.flex-column .nav-item a:hover { background-color:rgb(87, 114, 132); }
+
+    body,
+    a,
+    a:visited { color:hsla(204, 21%, 23%, 1); }
+
+    .nav-item.active .nav-link,
+    .jumbotron,
+    .mobile-menu ul li.active a { background-color:hsla(204, 21%, 23%, 1); }
+
+    .nav-item:not(.active):hover .nav-link,
+    .mobile-menu ul li:not(.active):hover a { background-color:hsla(204, 21%, 83%, 1); color:rgb(87, 114, 132); }
+    .nav-item.active:hover .nav-link { color:rgb(87, 114, 132); }
+
+    .mobile-nav .site-title a,
+    .mobile-nav .open-menu {
+        background-color: hsla(204, 21%, 93%, 1);
+        background-image: linear-gradient(0deg, #fff 0%, hsla(204, 21%, 93%, 1) 100%);
+    }
+    .mobile-nav .site-title a:hover,
+    .mobile-nav .open-menu:hover {
+        background-color: hsla(204, 21%, 83%, 1);
+        background-image: linear-gradient(0deg, hsla(204, 21%, 83%, 1) 0%, #fff 100%);
+    }
+    
+    .mobile-menu { right: 10px; }
+    .open-menu { position: absolute; right:10px; top:10px; }
+
+    .btn-primary { background-color: rgb(87, 114, 132); border-color: hsla(204, 21%, 23%, 1); }
+    .btn-primary.disabled, .btn-primary:disabled { background-color: hsla(204, 21%, 83%, 1); border-color: hsla(204, 21%, 83%, 1); }
+
+    .table-striped tbody tr:nth-of-type(odd) { background-color:hsla(204, 21%, 83%, 1); }
+}
