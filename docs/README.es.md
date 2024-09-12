@@ -4,7 +4,7 @@
 
 **Este es el sitio de inicio principal para FastSitePHP.** Incluye varias páginas de ejemplos y proporciona una estructura básica de directorio / archivo. El sitio está diseñado para proporcionar una estructura para el contenido básico (JavaScript, CSS, etc.) sin dejar de ser pequeño para que sea fácil eliminar los archivos que no necesita y personalizarlos para su sitio.
 
-## :rocket: Empezando
+## 🚀 Empezando
 
 **Comenzar a usar PHP y FastSitePHP es extremadamente fácil.** Si no tiene PHP instalado, consulte las instrucciones para Windows, Mac y Linux en la página de inicio:
 
@@ -100,7 +100,7 @@ sudo bash create-fast-site.sh
 
 ![Página de inicio de sesión del sitio de inicio](https://raw.githubusercontent.com/fastsitephp/static-files/master/img/starter_site/2020-01-10/login-page.png)
 
-## :lock: :rocket: Security and Performance
+## :lock: 🚀 Security and Performance
 
 FastSitePHP’s Starter Site is designed to provide strong security using best practices and high performance with the initial template. When using [Chrome DevTools Lighthouse](https://developers.google.com/web/tools/lighthouse) the Starter Site will score 100 in website categories for both Mobile and Desktop. On tested Cloud Systems using low cost servers a score of 100 is also achieved.
 
@@ -108,12 +108,12 @@ FastSitePHP’s Starter Site is designed to provide strong security using best p
 
 ![Chrome DevTools Network](https://raw.githubusercontent.com/fastsitephp/static-files/master/img/starter_site/2020-08-10/Chrome-DevTools-Network.png)
 
-## :handshake: Contribuyendo
+## 🤝 Contribuyendo
 
 * Si encuentra un error tipográfico o gramatical, corríjalo y envíelo.
 * Si desea ayudar con las traducciones, envíe los archivos de idioma JSON en `app_data/i18n`.
 * Si desea enviar cualquier otro cambio, abra primero un problema. Se pretende que este sea un sitio mínimo, por lo que agregar más código necesita una buena razón.
 
-## :memo: Licencia
+## 📝 Licencia
 
 Este proyecto está licenciado bajo la Licencia MIT; consulte el archivo [LICENSE](../LICENSE) para obtener más información.
